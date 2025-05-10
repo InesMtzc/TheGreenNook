@@ -1,18 +1,21 @@
-import  React from 'react';
-import {BrowserRouter as Router , Routes, Route} from 'react-router-dom';
-import RoleSelect from './components/RoleSelect';
-import Login from './components/Login';
-import Register from './components/Register';
+import {Routes, Route } from "react-router-dom";
+import Pocetna from "./pages/pocetna";
+import Onama from "./pages/onama";
+import Proizvodi from "./pages/proizvodi";
+import Kontakt from "./pages/kontakt";
+import Dostava from "./pages/dostava";
 
 function App() {
     return (
-        <Router>
+        <Routes>
             <Routes>
-                <Route path="/" element={<RoleSelect /> } />
-                <Route path="/login" element={<Login />} />
-                <Route path="/register" element={<Register />} />
+                <Route path="/" element={<Pocetna />} />
+                <Route path="/onama" element={<Onama />} />
+                <Route path="/proizvodi" element={<Proizvodi />} />
+                <Route path="/kontakt" element={<Kontakt />} />
+                <Route path="/dostava" element={<Dostava />} />
             </Routes>
-        </Router>
+        </Routes>
     );
 }
 
