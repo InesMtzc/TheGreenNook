@@ -6,21 +6,99 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: "Poppins", sans-serif;
 }
 
-.role-box, .form-box {
-    background-color: rgba(0, 50, 0, 0.5);
+.form-box {
+    background-color: rgba(97, 136, 75, 0.9); /* pastelno zelena sa prozirnošću */
+    backdrop-filter: blur(10px); /* zamućenje */
+    -webkit-backdrop-filter: blur(10px);
     padding: 40px;
-    border-radius: 10px;
-    color: white;
+    border-radius: 12px;
+    text-align: center;
     display: flex;
     flex-direction: column;
     gap: 15px;
-    text-align: center;
+    width: 320px;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
+    color: white;
 }
 
-input, button {
-    padding: 10px;
-    border-radius: 5px;
+.form-box h2 {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 10px;
+}
+
+
+
+.role-box button {
+    background-color: rgba(97, 136, 75, 0.9); /* pastelno zelena sa prozirnošću */
+    backdrop-filter: blur(10px); /* zamućenje */
+    -webkit-backdrop-filter: blur(10px);
+    width: 150px;
+    padding: 12px;
+    color: white;
+    font-weight: bold;
     border: none;
+    border-radius: 0; /* oštre ivice */
+    font-family: "Poppins", sans-serif;
+    cursor: pointer;
+    transition: 0.3s ease;
+    align-content: center;
+}
+.role-box {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    border-radius: 0;
+}
+
+
+
+
+input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    background-color: rgba(255, 255, 255, 0.85);
+    color: #333;
+}
+
+input::placeholder {
+    color: #666;
+}
+
+button {
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    background-color: white;
+    color: black; /* samo ovdje crna slova */
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #e2e2e2;
+}
+
+.form-box p {
+    font-size: 10px;
+    color: white;
+    margin: 0;
+}
+
+p a {
+    color: white;
+    text-decoration: underline;
 }

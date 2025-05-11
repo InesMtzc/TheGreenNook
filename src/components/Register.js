@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import './style.css';
 
 const Register = () => {
     return (
@@ -11,7 +12,7 @@ const Register = () => {
                 <input type="email" placeholder="Email" />
                 <input type="password" placeholder="Lozinka" />
                 <input type="password" placeholder="Potvrdi lozinku" />
-                <button>Prijavi se</button>
+                <button>Registruj se</button>
                 <p>Imate račun? <Link to="/login">Uloguj se</Link></p>
             </div>
         </div>
