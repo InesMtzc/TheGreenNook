@@ -7,6 +7,7 @@ import Dostava from "./pages/dostava";
 
 function App() {
     return (
+
         <Routes>
             <Routes>
                 <Route path="/" element={<Pocetna />} />
@@ -17,6 +18,7 @@ function App() {
             </Routes>
         </Routes>
     );
+    <Pocetna></Pocetna>
 }
 
 export default App;
