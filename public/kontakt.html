@@ -26,3 +26,55 @@
         </ul>
     </nav>
 </div>
+
+<main>
+    <h1>Uvijek se obradujemo vašim porukama!</h1>
+    <div class="row sadrzaj">
+        <div class="col-6 rezime">
+            <fieldset>
+                <legend>Kontakt forma</legend>
+                <form action="kontakt.php" method="POST">
+                    <table>
+                        <tr>
+                            <td>E-pošta:</td>
+                            <td><input type="email" name="email"/></td>
+                        </tr>
+                        <tr>
+                            <td>Naslov vaše poruke:</td>
+                            <td><input type="text" name="naslov"/></td>
+                        </tr>
+                        <tr>
+                            <td>Poruka</td>
+                            <td><textarea cols="40" rows="10"></textarea></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"><input type="submit" name="koment" value="Pošalji"/></td>
+                        </tr>
+                    </table>
+                </form>
+            </fieldset>
+            <br/><br/>
+        </div>
+    </div>
+</main>
+<footer>
+    <p>© 2024 The Green Nook. Sva prava zadržana.</p>
+</footer>
+
+<script>
+    const burgerMenu = document.getElementById('burger-menu');
+    const menu = document.getElementById('menu');
+    const menuLinks = document.querySelectorAll('.menu li a');
+
+    burgerMenu.addEventListener('click', () => {
+        menu.classList.toggle('active');
+    });
+
+    menuLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            menu.classList.remove('active');
+        });
+    });
+</script>
+</body>
+</html>

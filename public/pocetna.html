@@ -14,7 +14,7 @@
 
 <div class="header-box">
     <div class="logo">
-        <img src="slike/logo.jpg" alt="The Green Nook Logo">
+        <img src="assets/logo.jpg" alt="The Green Nook Logo">
     </div>
     <nav>
         <ul class="menu" id="menu">
@@ -153,20 +153,6 @@
             <footer>
                 <p>© 2024 The Green Nook. Sva prava zadržana.</p>
             </footer>
-            <script>
-                const burgerMenu = document.getElementById('burger-menu');
-                const menu = document.getElementById('menu');
-                const menuLinks = document.querySelectorAll('.menu li a');
-
-                burgerMenu.addEventListener('click', () => {
-                    menu.classList.toggle('active');
-                });
-
-                menuLinks.forEach(link => {
-                    link.addEventListener('click', () => {
-                        menu.classList.remove('active');
-                    });
-                });
-            </script>
+<script src="script.js"></script>
             </body>
             </html>
