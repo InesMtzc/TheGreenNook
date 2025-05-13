@@ -29,7 +29,7 @@ header {
 }
 
 .hero-section {
-    background-image: url('assets/pocetna11.png'), url('assets/pocetna22.png'), url('assets/pocetna33.png');
+    background-image: url('../images/pocetna11.png'), url('../images/pocetna22.png'), url('../images/pocetna33.png');
     background-size: 33.33% 100%;
     background-position: left, center, right;
     background-repeat: no-repeat;
@@ -72,7 +72,7 @@ header {
     width: 60px;
     height: auto;
     border-radius: 50%;
-    position: relative;
+    position: fixed;
 }
 
 .logo h1 {
@@ -213,11 +213,12 @@ h1 {
     justify-content: space-between;
 }
 
-h2 {
+h4 {
     font-family: 'Passions Conflict', cursive;
-    font-size: 60px;
+    font-size: 30px;
     color:  #61884B;
     text-align: center;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
 }
 h3 {
     text-align: center;

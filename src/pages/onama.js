@@ -1,14 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "../stilovi.css";
+import "../assets/styles/stilovi.css";
+import Header from "../components/header";
+import Footer from "../components/footer";
 
 const Onama = () => {
     return (
         <div>
-            <header>
-                <p>Besplatna poštarina za narudžbe iznad 50KM.</p>
-            </header>
-
+            <Header />
             <div className="header-box">
                 <div className="logo">
                     <img src="/slike/logo.jpg" alt="The Green Nook Logo" />
@@ -38,10 +37,7 @@ const Onama = () => {
                     </p>
                 </section>
             </main>
-
-            <footer>
-                <p>© 2024 The Green Nook. Sva prava zadržana.</p>
-            </footer>
+            <Footer />
         </div>
     );
 };

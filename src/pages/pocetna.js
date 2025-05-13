@@ -1,14 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "../stilovi.css";
+import "../assets/styles/stilovi.css";
+import Header from "../components/header";
+import Footer from "../components/footer";
+
 
 const Pocetna = () => {
     return (
         <div>
-            <header>
-                <p>Besplatna poštarina za narudžbe iznad 50KM.</p>
-            </header>
-
+            <Header />
             <div className="header-box">
                 <div className="logo">
                     <img src="/slike/logo.jpg" alt="The Green Nook Logo" />
@@ -27,11 +27,8 @@ const Pocetna = () => {
             <main>
                 <section className="hero-section">
                     <div className="hero-overlay">
-                        <img src="/slike/pocetna1.png" alt="Slika 1" />
-                        <img src="/slike/pocetna2.png" alt="Slika 2" />
-                        <img src="/slike/pocetna3.png" alt="Slika 3" />
                         <h1>Dobrodošli u The Green Nook</h1>
-                        <h2>Tu smo za vaše tijelo, duh i dom</h2>
+                        <h4>Tu smo za vaše tijelo, duh i dom</h4>
                     </div>
                 </section>
 
@@ -102,10 +99,7 @@ const Pocetna = () => {
                     </li>
                 </ul>
             </main>
-
-            <footer>
-                <p>© 2024 The Green Nook. Sva prava zadržana.</p>
-            </footer>
+            <Footer />
         </div>
     );
 };

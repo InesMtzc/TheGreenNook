@@ -1,4 +1,4 @@
-import {Routes, Route } from "react-router-dom";
+import {BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Pocetna from "./pages/pocetna";
 import Onama from "./pages/onama";
 import Proizvodi from "./pages/proizvodi";
@@ -7,8 +7,7 @@ import Dostava from "./pages/dostava";
 
 function App() {
     return (
-
-        <Routes>
+        <Router>
             <Routes>
                 <Route path="/" element={<Pocetna />} />
                 <Route path="/onama" element={<Onama />} />
@@ -16,9 +15,8 @@ function App() {
                 <Route path="/kontakt" element={<Kontakt />} />
                 <Route path="/dostava" element={<Dostava />} />
             </Routes>
-        </Routes>
+        </Router>
     );
-    <Pocetna></Pocetna>
 }
 
 export default App;
