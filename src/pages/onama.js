@@ -4,7 +4,7 @@ import "../assets/styles/stilovi.css";
 import Header from "../components/header";
 import Footer from "../components/footer";
 
-const Onama = () => {
+function Onama (){
     return (
         <div>
             <Header />

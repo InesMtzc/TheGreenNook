@@ -5,7 +5,9 @@ import Header from "../components/header";
 import Footer from "../components/footer";
 
 
-const Pocetna = () => {
+
+function Pocetna() {
+
     return (
         <div>
             <Header />
@@ -14,15 +16,19 @@ const Pocetna = () => {
                     <img src="/slike/logo.jpg" alt="The Green Nook Logo" />
                 </div>
                 <nav>
+
                     <ul className="menu" id="menu">
                         <li><Link to="/">Početna</Link></li>
                         <li><Link to="/onama">O nama</Link></li>
                         <li><Link to="/proizvodi">Proizvodi</Link></li>
                         <li><Link to="/kontakt">Kontakt</Link></li>
                         <li><Link to="/dostava">Dostava</Link></li>
+                        <li><Link to="/login">Prijava</Link></li>
                     </ul>
                 </nav>
+
             </div>
+
 
             <main>
                 <section className="hero-section">
@@ -52,7 +58,7 @@ const Pocetna = () => {
                     </section>
                 ))}
 
-                <h2>🌿 Pridruži se nam se i na Instagramu 🌿</h2>
+                <h2>🌿 Pridruži nam se i na Instagramu 🌿</h2>
                 <img src="/slike/logo.jpg" alt="The Green Nook Logo" />
                 <li>
                     <a

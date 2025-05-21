@@ -1,9 +1,9 @@
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 body {
     font-family: 'Poppins', sans-serif;
     background-color: #FFFBF6;
@@ -41,7 +41,7 @@ header {
     align-items: center;
     text-align: center;
     padding: 100px 20px;
-    color: #fff;
+    color: #ffff;
 }
 
 .hero-overlay {
@@ -121,8 +121,9 @@ section {
 
 #featured h2 {
     color: #4A7C59;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
     text-align: center;
+    font-family: 'Sacramento', cursive;
 }
 
 .featured-items {
@@ -214,9 +215,9 @@ h1 {
 }
 
 h4 {
-    font-family: 'Passions Conflict', cursive;
-    font-size: 30px;
-    color:  #61884B;
+    font-family: 'Sacramento', cursive;
+    font-size: 50px;
+    color:  white;
     text-align: center;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
 }

@@ -1,0 +1,83 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "ime": "Ines",
+      "email": "ines@admin.com",
+      "password": "1234",
+      "role": "admin"
+    },
+    {
+      "id": "2",
+      "ime": "Selma",
+      "email": "selma@admin.com",
+      "password": "1234",
+      "role": "admin"
+    },
+    {
+      "id": "3",
+      "ime": "Aida",
+      "email": "aida@admin.com",
+      "password": "1234",
+      "role": "admin"
+    },
+    {
+      "id": "4",
+      "ime": "Neko",
+      "email": "neko@gost.com",
+      "password": "1234",
+      "role": "guest"
+    },
+    {
+      "id": "130b",
+      "ime": "MAja",
+      "email": "maja@size.ba",
+      "password": "1111",
+      "role": "gost"
+    },
+    {
+      "id": "392c",
+      "ime": "Ines",
+      "email": "hahah@size.ba",
+      "password": "11111",
+      "role": "gost"
+    },
+    {
+      "id": "1559",
+      "ime": "",
+      "email": "",
+      "password": "",
+      "role": "gost"
+    },
+    {
+      "id": "0c7d",
+      "ime": "",
+      "email": "",
+      "password": "",
+      "role": "gost"
+    },
+    {
+      "id": "0d37",
+      "ime": "",
+      "email": "",
+      "password": "",
+      "role": "gost"
+    },
+    {
+      "id": "c1a4",
+      "ime": "Maja",
+      "email": "maja@size.ba",
+      "password": "1111",
+      "role": "gost"
+    },
+    {
+      "id": "62ff",
+      "ime": "Maja",
+      "email": "maja@size.ba",
+      "password": "1234",
+      "role": "gost"
+    }
+  ],
+  "products": [],
+  "messages": []
+}
