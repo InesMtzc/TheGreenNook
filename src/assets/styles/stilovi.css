@@ -1,3 +1,20 @@
+html, body, #root {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.App {
+    min-height: 100vh;          /* cela visina ekrana */
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;                   /* zauzima sav raspoloživi prostor između headera i footera */
+}
+
+
 * {
     margin: 0;
     padding: 0;
@@ -21,12 +38,11 @@ header {
     flex-wrap: wrap;
 }
 .header-box {
+    z-index: 1000;
     background-color: #F3EDE0;
-    padding: 15px 20px;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
+
 
 .hero-section {
     background-image: url('../images/pocetna11.png'), url('../images/pocetna22.png'), url('../images/pocetna33.png');
@@ -72,7 +88,6 @@ header {
     width: 60px;
     height: auto;
     border-radius: 50%;
-    position: fixed;
 }
 
 .logo h1 {
@@ -131,7 +146,12 @@ section {
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 20px;
 }
-
+.product-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 u jednom redu */
+    gap: 20px;
+    padding: 20px;
+}
 .item {
     background-color: #FFFFFF;
     padding: 15px;
@@ -139,6 +159,10 @@ section {
     border-radius: 8px;
     text-align: center;
     transition: transform 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%
 }
 
 .item:hover {
@@ -172,6 +196,25 @@ section {
 .button:hover {
     background-color: #2F3E2E;
 }
+.dugme-korpa {
+    .button {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #61884B;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5px;
+        font-weight: bold;
+        transition: background-color 0.3s;
+    }
+
+    .button:hover {
+        background-color: #2F3E2E;
+    }
+}
+
+
+
 
 footer {
     background-color: #61884B;
@@ -230,3 +273,111 @@ h3 {
 p{
     font-family: 'Poppins', sans-serif;
 }
+.proizvod-detalji-container {
+    padding: 2rem;
+}
+
+.proizvod-detalji {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    max-width: 900px;
+    margin-left: 0;
+    flex-wrap: wrap; /* za responsive */
+}
+
+.proizvod-detalji img {
+    width: 300px;
+    border-radius: 10px;
+}
+
+.detalji-tekst {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+}
+
+.detalji-tekst h1 {
+    margin-bottom: 1rem;
+}
+
+.detalji-tekst p {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.detalji-tekst .button {
+    align-self: flex-start;
+    margin: 0 auto;
+    display: block;/* da dugme ne bude široko preko cele širine */
+}
+
+
+
+.custom-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none !important;
+    border: none !important;
+    outline: none !important;
+    color: #59663D;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 0;
+    user-select: none;
+}
+
+.custom-arrow:focus,
+.custom-arrow:active {
+    background: none !important;
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+.left-arrow {
+    left: -20px; /* pomjeri lijevu strelicu lijevo izvan slike */
+}
+
+.right-arrow {
+    right: -20px; /* pomjeri desnu strelicu desno izvan slike */
+}
+
+
+
+
+.opis-proizvoda {
+    white-space: pre-line;
+}
+.cijena-proizvoda {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #2e7d32; /* neka bude zelena ili po želji */
+    margin: 0.5rem 0;
+}
+.cijena {
+    font-weight: bold;
+    color: #2d6a4f;
+    margin: 8px 0;
+}
+.scroll-to-top {
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: none;
+    border: none;
+    font-size: 30px;
+    color: #000;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+
+.scroll-to-top:hover {
+    color: #59663D;
+}
+

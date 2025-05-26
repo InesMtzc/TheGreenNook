@@ -7,11 +7,9 @@ import Footer from "../components/footer";
 function Dostava() {
     return (
         <div>
-            <Header />
+
             <div className="header-box">
-                <div className="logo">
-                    <img src="/slike/logo.jpg" alt="The Green Nook Logo" />
-                </div>
+
                 <nav>
                     <ul className="menu" id="menu">
                         <li><Link to="/">Početna</Link></li>
@@ -37,7 +35,7 @@ function Dostava() {
                     </p>
                 </section>
             </main>
-            <Footer />
+
         </div>
     );
 };

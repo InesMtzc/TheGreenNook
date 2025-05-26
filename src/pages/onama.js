@@ -1,13 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "../assets/styles/stilovi.css";
-import Header from "../components/header";
-import Footer from "../components/footer";
+
 
 function Onama (){
     return (
         <div>
-            <Header />
+
             <div className="header-box">
                 <div className="logo">
                     <img src="/slike/logo.jpg" alt="The Green Nook Logo" />
@@ -37,7 +36,7 @@ function Onama (){
                     </p>
                 </section>
             </main>
-            <Footer />
+
         </div>
     );
 };

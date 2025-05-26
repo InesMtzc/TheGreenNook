@@ -7,11 +7,9 @@ import Footer from "../components/footer";
 function Kontakt() {
     return (
         <div>
-            <Header />
+
             <div className="header-box">
-                <div className="logo">
-                    <img src="/slike/logo.jpg" alt="The Green Nook Logo" />
-                </div>
+
                 <nav>
                     <ul className="menu" id="menu">
                         <li><Link to="/">Početna</Link></li>
@@ -45,7 +43,7 @@ function Kontakt() {
                     </form>
                 </section>
             </main>
-            <Footer />
+
         </div>
     );
 };
