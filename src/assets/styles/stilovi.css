@@ -1,0 +1,383 @@
+html, body, #root {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.App {
+    min-height: 100vh;          /* cela visina ekrana */
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;                   /* zauzima sav raspoloživi prostor između headera i footera */
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #FFFBF6;
+    color: #333333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #61884B;
+    color: #F5F0E6;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.header-box {
+    z-index: 1000;
+    background-color: #F3EDE0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+.hero-section {
+    background-image: url('../images/pocetna11.png'), url('../images/pocetna22.png'), url('../images/pocetna33.png');
+    background-size: 33.33% 100%;
+    background-position: left, center, right;
+    background-repeat: no-repeat;
+    height: 400px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 100px 20px;
+    color: #ffff;
+}
+
+.hero-overlay {
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 40px;
+    border-radius: 10px;
+    color: #fff;
+}
+
+.hero-section h1 {
+    font-family: 'Playfair Display SC', serif;
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.hero-section h3 {
+    font-family: 'Passions Conflict', cursive;
+    font-size: 2rem;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo img {
+    width: 60px;
+    height: auto;
+    border-radius: 50%;
+}
+
+.logo h1 {
+    font-size: 1.8rem;
+}
+nav ul.menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    text-align: right;
+}
+
+nav ul.menu li a {
+    color: #59663D;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+nav ul.menu li a:hover {
+    background-color: #abb599;
+}
+
+#hero {
+    background-color: #C3AED6;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.hero-content h2 {
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+}
+
+.hero-content h3 {
+    font-size: 1.5rem;
+    color: #2F3E2E;
+}
+
+section {
+    padding: 40px 20px;
+}
+
+#featured h2 {
+    color: #4A7C59;
+    margin-bottom: 50px;
+    text-align: center;
+    font-family: 'Sacramento', cursive;
+}
+
+.featured-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+.product-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 u jednom redu */
+    gap: 20px;
+    padding: 20px;
+}
+.item {
+    background-color: #FFFFFF;
+    padding: 15px;
+    border: 1px solid #E0E0E0;
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%
+}
+
+.item:hover {
+    transform: translateY(-5px);
+}
+
+.item img {
+    width: 100%;
+    max-height: 200px;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+.item h3 {
+    margin: 15px 0;
+    font-size: 1.2rem;
+    color: #2F3E2E;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #61884B;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #2F3E2E;
+}
+.dugme-korpa {
+    .button {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #61884B;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5px;
+        font-weight: bold;
+        transition: background-color 0.3s;
+    }
+
+    .button:hover {
+        background-color: #2F3E2E;
+    }
+}
+
+
+
+
+footer {
+    background-color: #61884B;
+    color: #F5F0E6;
+    text-align: center;
+    padding: 20px;
+}
+
+ul.form-box {
+    list-style: none;
+    margin: 30px 0;
+    background-color: #E0E0E0;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+ul.form-box li {
+    margin: 10px 0;
+}
+
+ul.form-box a {
+    color: #4A7C59;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+ul.form-box a:hover {
+    text-decoration: underline;
+}
+
+img[src*="logo.jpg"] {
+    display: block;
+    margin: 20px auto;
+    width: 80px;
+    border-radius: 50%;
+}
+h1 {
+    font-family: 'Playfair Display SC', serif;
+    text-align: center;
+    justify-content: space-between;
+}
+
+h4 {
+    font-family: 'Sacramento', cursive;
+    font-size: 50px;
+    color:  white;
+    text-align: center;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+}
+h3 {
+    text-align: center;
+    margin: 10px auto;
+    max-width: 800px;
+}
+
+p{
+    font-family: 'Poppins', sans-serif;
+}
+.proizvod-detalji-container {
+    padding: 2rem;
+}
+
+.proizvod-detalji {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    max-width: 900px;
+    margin-left: 0;
+    flex-wrap: wrap; /* za responsive */
+}
+
+.proizvod-detalji img {
+    width: 300px;
+    border-radius: 10px;
+}
+
+.detalji-tekst {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+}
+
+.detalji-tekst h1 {
+    margin-bottom: 1rem;
+}
+
+.detalji-tekst p {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.detalji-tekst .button {
+    align-self: flex-start;
+    margin: 0 auto;
+    display: block;/* da dugme ne bude široko preko cele širine */
+}
+
+
+
+.custom-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none !important;
+    border: none !important;
+    outline: none !important;
+    color: #59663D;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 0;
+    user-select: none;
+}
+
+.custom-arrow:focus,
+.custom-arrow:active {
+    background: none !important;
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+.left-arrow {
+    left: -20px; /* pomjeri lijevu strelicu lijevo izvan slike */
+}
+
+.right-arrow {
+    right: -20px; /* pomjeri desnu strelicu desno izvan slike */
+}
+
+
+
+
+.opis-proizvoda {
+    white-space: pre-line;
+}
+.cijena-proizvoda {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #2e7d32; /* neka bude zelena ili po želji */
+    margin: 0.5rem 0;
+}
+.cijena {
+    font-weight: bold;
+    color: #2d6a4f;
+    margin: 8px 0;
+}
+.scroll-to-top {
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: none;
+    border: none;
+    font-size: 30px;
+    color: #000;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+
+.scroll-to-top:hover {
+    color: #59663D;
+}
+

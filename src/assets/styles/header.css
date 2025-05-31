@@ -1,0 +1,38 @@
+/* Stilizovanje top-banner-a */
+.top-banner {
+    color: #FFFFFF; /* Bijela boja slova */
+    text-align: center; /* Centriranje teksta horizontalno */
+    padding: 5px; /* Dodavanje unutrašnjeg razmaka */
+    font-size: 10px; /* Povećavanje fonta */
+    border-radius: 5px; /* Dodavanje zaobljenih ivica */
+    margin: 0 auto; /* Centriranje celog bar-a u sredinu */
+    width: 100%; /* Postavljanje širine na 100% da pokrije celu širinu ekrana */
+    overflow: hidden; /* Sakrivanje dela teksta koji prelazi izvan elementa */
+}
+
+header {
+    display: flex;
+    justify-content: center; /* Centriranje sadržaja unutar header-a */
+    align-items: center; /* Vertikalno centriranje */
+    height: 40px; /* Visina trake (možeš prilagoditi po želji) */
+    position: relative;
+}
+
+/* Animacija pomeranja teksta u liniji */
+@keyframes moveText {
+    0% {
+        transform: translateX(100vw); /* Početak sa desne strane (van ekrana) */
+    }
+    100% {
+        transform: translateX(-100vw); /* Kraj na levoj strani (van ekrana) */
+    }
+}
+
+/* Dodaj animaciju na tekst */
+.moving-text {
+    display: inline-block;
+    font-size: 15px; /* Veličina fonta */
+    font-weight: bold; /* Debela slova */
+    white-space: nowrap; /* Da tekst ostane u jednom redu */
+    animation: moveText 30s linear infinite; /* Animacija koja traje 10s, uvek se ponavlja */
+}

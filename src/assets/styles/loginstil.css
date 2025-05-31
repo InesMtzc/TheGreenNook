@@ -1,0 +1,82 @@
+
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: "Lexend Mega", serif;
+}
+
+form {
+    background-color: rgba(108, 150, 88, 0.9); /* pastelno zelena sa prozirnošću */
+    backdrop-filter: blur(10px); /* zamućenje */
+    -webkit-backdrop-filter: blur(10px);
+    padding: 40px;
+    border-radius: 12px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 320px;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
+    color: white;
+    font-family: "Lexend Mega", serif;
+}
+
+
+.login-wrapper {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom right, #f4f4f4, #e0e0e0);
+}
+
+
+h2 {
+    text-align: center;
+    color: white;
+    margin-bottom: 20px;
+    font-size: 24px;
+    letter-spacing: 1px;
+    font-family: "Lexend Mega", serif;
+}
+
+label {
+    text-align: left;
+    color: white;
+    margin: 10px 0 5px;
+}
+
+
+input {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    outline: none;
+    box-shadow: inset 0 0 3px rgba(0,0,0,0.2);
+
+}
+input:focus {
+    box-shadow: 0 0 5px #b5f7ad;
+}
+
+button {
+    padding: 12px;
+    background-color: #61884B;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+    font-family: "Lexend Mega", serif;
+}
+
+button:hover {
+    background-color: #b5f7ad
+}
+
