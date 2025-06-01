@@ -5,13 +5,13 @@ html, body, #root {
 }
 
 .App {
-    min-height: 100vh;          /* cela visina ekrana */
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
 }
 
 main {
-    flex: 1;                   /* zauzima sav raspoloživi prostor između headera i footera */
+    flex: 1;
 }
 
 
@@ -68,9 +68,9 @@ header {
 }
 
 .hero-section h1 {
-    font-family: 'Playfair Display SC', serif;
     font-size: 3rem;
     margin-bottom: 10px;
+    color: #61884B;
 }
 
 .hero-section h3 {
@@ -252,7 +252,8 @@ img[src*="logo.jpg"] {
     border-radius: 50%;
 }
 h1 {
-    font-family: 'Playfair Display SC', serif;
+    color: #61884B;
+    font-size: 40px;
     text-align: center;
     justify-content: space-between;
 }
@@ -272,6 +273,7 @@ h3 {
 
 p{
     font-family: 'Poppins', sans-serif;
+    color: #2F3E2E;
 }
 .proizvod-detalji-container {
     padding: 2rem;
@@ -346,11 +348,9 @@ p{
     right: -20px; /* pomjeri desnu strelicu desno izvan slike */
 }
 
-
-
-
 .opis-proizvoda {
     white-space: pre-line;
+    color: #4a4a4a;
 }
 .cijena-proizvoda {
     font-size: 1.3rem;
@@ -380,4 +380,3 @@ p{
 .scroll-to-top:hover {
     color: #59663D;
 }
-

@@ -139,19 +139,38 @@ function ProizvodDetalji() {
     };
     return (
         <div>
-
             <div className="header-box">
+                <div className="logo">
+                    <img src="/slike/logo.jpg" alt="The Green Nook Logo" />
+                </div>
                 <nav>
                     <ul className="menu" id="menu">
                         <li><Link to="/">Početna</Link></li>
                         <li><Link to="/onama">O nama</Link></li>
-                        <li><Link to="/proizvodi">Proizvodi</Link></li>
                         <li><Link to="/kontakt">Kontakt</Link></li>
-                        <li><Link to="/dostava">Dostava</Link></li>
+                        <li><Link to="/login">Prijava</Link></li>
                     </ul>
                 </nav>
-            </div>
+                <div className="header-right">
+                    {/* Pretraga */}
+                    <div className="search-box">
+                        <input type="text" placeholder="Pretraživanje..." />
+                        <button className="search-btn" aria-label="Pretraži">
+                            🔍
+                        </button>
+                    </div>
 
+                    {/* Srce za omiljene */}
+                    <Link to="/favoriti" className="icon-btn" aria-label="Omiljeni proizvodi">
+                        ❤
+                    </Link>
+
+                    {/* Korpa */}
+                    <Link to="/korpa" className="icon-btn" aria-label="Korpa">
+                        🛒
+                    </Link>
+                </div>
+            </div>
 
             <main className="proizvod-detalji-container">
                 <div className="proizvod-detalji">
@@ -183,33 +202,6 @@ function ProizvodDetalji() {
                     </div>
 
                 </div>
-                <ul className="form-box">
-                    <li><h2>Naša obećanja kupcima</h2></li>
-                    <li><p>Prirodni sastojci bez kompromisa</p></li>
-                    <li><p>Ručna izrada s ljubavlju</p></li>
-                    <li><p>Transparentnost u sastavu</p></li>
-                    <li><p>Održivost i poštovanje prirode</p></li>
-                    <li><p>Podrška i povjerenje</p></li>
-                    <li><p>Zadovoljstvo zagarantovano</p></li>
-                    <li>
-                        <a
-                            href="https://twitter.com/fashionflair"
-                            target="_blank"
-                            rel="noreferrer"
-                        >
-                            Twitter
-                        </a>
-                    </li>
-                    <li>
-                        <a
-                            href="https://www.facebook.com/fashionflair"
-                            target="_blank"
-                            rel="noreferrer"
-                        >
-                            Facebook
-                        </a>
-                    </li>
-                </ul>
             </main>
 
         </div>

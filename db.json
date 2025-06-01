@@ -79,5 +79,27 @@
     }
   ],
   "products": [],
-  "messages": []
+  "messages": [],
+
+  "tim": [
+    {
+      "id": 1,
+      "ime": "Ines",
+      "slika": "public/slike/Ines.png",
+      "opis": "Stručnjakinja za aromaterapiju i biljnu njegu. Donosi znanje iz botanike i ljubav prema prirodi."
+    },
+    {
+      "id": 2,
+      "ime": "Aida",
+      "slika": "public/slike/Aida1.png",
+      "opis": "Organizatorka tima i kreativna snaga marketinga. Uvijek donosi novu energiju i ideje."
+    },
+    {
+      "id": 3,
+      "ime": "Selma",
+      "slika": "public/slike/Selma.png",
+      "opis": "Inicijator projekta i stručnjakinja za prirodnu kozmetiku. Brine o kvaliteti svakog proizvoda."
+    }
+  ]
+
 }

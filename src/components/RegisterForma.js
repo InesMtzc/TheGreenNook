@@ -39,26 +39,31 @@ function RegisterForm({ onRegister }) {
     };
 
     return (
-        <div className="login-wrapper"> {/* koristi istu klasu kao login da zadržiš stil */}
+        <div className="register-wrapper" style={{
+            backgroundImage: "url('/slike/pozadina1.png')",
+            backgroundSize: "cover",
+            backgroundRepeat: "no-repeat",
+            backgroundPosition: "center"
+        }}> {/* koristi istu klasu kao login da zadržiš stil */}
             <form onSubmit={handleSubmit}>
                 <h2>Registracija</h2>
-                <label>Ime</label>
                 <input
                     type='text'
+                    placeholder="Ime"
                     value={ime}
                     onChange={(e) => setIme(e.target.value)}
                     required
                 />
-                <label>Email</label>
                 <input
                     type='email'
+                    placeholder="Email"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     required
                 />
-                <label>Lozinka</label>
                 <input
                     type='password'
+                    placeholder="Lozinka"
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
                     required

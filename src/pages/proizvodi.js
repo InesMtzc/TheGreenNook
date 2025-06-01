@@ -1,10 +1,24 @@
-import React from "react";
 import { Link } from "react-router-dom";
-import "../assets/styles/proizvodi.css";
+import React, { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import Header from "../components/header";
 import Footer from "../components/footer";
+import "../assets/styles/proizvodi.css";
+
 
 function Proizvodi(){
+    const location = useLocation();
+
+
+    useEffect(() => {
+        if (location.state && location.state.sectionId) {
+            const section = document.getElementById(location.state.sectionId);
+            if (section) {
+                section.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+    }, [location.state]);
+
     const cajevi = [
         { id: 1, naziv: "Prirodni čaj od divlje ruže i hibiskusa", slika: "caj1.png", cijena:"3.95"},
         { id: 2, naziv: "Čaj od metvice i nane", slika: "caj2.png", opis: "Osvježavajući čaj s mirisom metvice i nane.", cijena:"4.95" },
@@ -120,25 +134,45 @@ function Proizvodi(){
 
     ];
     return (
-        <div>
+            <div>
+                <div className="header-box">
+                    <div className="logo">
+                        <img src="/slike/logo.jpg" alt="The Green Nook Logo" />
+                    </div>
+                    <nav>
+                        <ul className="menu" id="menu">
+                            <li><Link to="/">Početna</Link></li>
+                            <li><Link to="/onama">O nama</Link></li>
+                            <li><Link to="/kontakt">Kontakt</Link></li>
+                            <li><Link to="/login">Prijava</Link></li>
+                        </ul>
+                    </nav>
+                    <div className="header-right">
+                        {/* Pretraga */}
+                        <div className="search-box">
+                            <input type="text" placeholder="Pretraživanje..." />
+                            <button className="search-btn" aria-label="Pretraži">
+                                🔍
+                            </button>
+                        </div>
 
-            <div className="header-box">
-                <nav>
-                    <ul className="menu" id="menu">
-                        <li><Link to="/">Početna</Link></li>
-                        <li><Link to="/onama">O nama</Link></li>
-                        <li><Link to="/proizvodi">Proizvodi</Link></li>
-                        <li><Link to="/kontakt">Kontakt</Link></li>
-                        <li><Link to="/dostava">Dostava</Link></li>
-                    </ul>
-                </nav>
-            </div>
+                        {/* Srce za omiljene */}
+                        <Link to="/favoriti" className="icon-btn" aria-label="Omiljeni proizvodi">
+                            ❤
+                        </Link>
+
+                        {/* Korpa */}
+                        <Link to="/korpa" className="icon-btn" aria-label="Korpa">
+                            🛒
+                        </Link>
+                    </div>
+                </div>
 
             <main>
                 <section className="proizvodi-section">
                     <h1>Naša ponuda proizvoda</h1>
 
-                    <h3>Čajevi</h3>
+                    <h3 id="cajevi">Čajevi</h3>
                     <div className="product-list">
                         {cajevi.map(proizvod => (
                             <div className="item" key={proizvod.id}>
@@ -150,7 +184,7 @@ function Proizvodi(){
                         ))}
                     </div>
 
-                    <h3>Kreme</h3>
+                    <h3 id="kreme">Kreme</h3>
                     <div className="product-list">
                         {kreme.map(proizvod => (
                             <div className="item" key={proizvod.id}>
@@ -162,7 +196,7 @@ function Proizvodi(){
                         ))}
                     </div>
 
-                    <h3>Sapuni</h3>
+                    <h3 id="sapuni">Sapuni</h3>
                     <div className="product-list">
                         {sapuni.map(proizvod => (
                             <div className="item" key={proizvod.id}>
@@ -173,7 +207,7 @@ function Proizvodi(){
                             </div>
                         ))}
                     </div>
-                    <h3>Ulja</h3>
+                    <h3 id="ulja">Ulja</h3>
                     <div className="product-list">
                         {ulja.map(proizvod => (
                             <div className="item" key={proizvod.id}>

@@ -29,19 +29,25 @@ function LoginForma({ onLogin }){
     return (
 
 
-        <div className="login-wrapper">
+        <div className="login-wrapper"  style={{
+            backgroundImage: "url('/slike/pozadina1.png')",
+            backgroundSize: "cover",
+            backgroundRepeat: "no-repeat",
+            backgroundPosition: "center"
+        }}>
             <form onSubmit={handleSubmit}>
                     <h2>LOGIN</h2>
-                    <label>Email</label>
                     <input
                         type='email'
+                        placeholder="Vaš email"
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
                         required
                     />
-                    <label>Lozinka</label>
+
                     <input
                         type='password'
+                        placeholder="Vaša lozinka"
                         value={password}
                         onChange={(e) => setPassword(e.target.value)}
                         required
