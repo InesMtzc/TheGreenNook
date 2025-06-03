@@ -1,0 +1,932 @@
+html, body, #root {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.App {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    margin: 0;
+    padding: 0;
+    flex: 1;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #FFFBF6;
+    color: #333333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #61884B;
+    color: #F5F0E6;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.header-box {
+    z-index: 1000;
+    background-color: #F3EDE0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+.hero-section {
+    background-image: url('../images/pocetna11.png'), url('../images/pocetna22.png'), url('../images/pocetna33.png');
+    background-size: 33.33% 100%;
+    background-position: left, center, right;
+    background-repeat: no-repeat;
+    height: 400px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 100px 20px;
+    color: #ffff;
+}
+
+.hero-overlay {
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 40px;
+    border-radius: 10px;
+    color: #fff;
+}
+
+.hero-section h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    color: #61884B;
+}
+
+.hero-section h3 {
+    font-family: 'Passions Conflict', cursive;
+    font-size: 2rem;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo img {
+    width: 60px;
+    height: auto;
+    border-radius: 50%;
+}
+
+.logo h1 {
+    font-size: 1.8rem;
+}
+nav ul.menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    text-align: right;
+}
+
+nav ul.menu li a {
+    color: #59663D;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+nav ul.menu li a:hover {
+    background-color: #abb599;
+}
+
+#hero {
+    background-color: #C3AED6;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.hero-content h2 {
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+}
+
+.hero-content h3 {
+    font-size: 1.5rem;
+    color: #2F3E2E;
+}
+
+section {
+    padding: 40px 20px;
+}
+
+#featured h2 {
+    color: #4A7C59;
+    margin-bottom: 50px;
+    text-align: center;
+    font-family: 'Sacramento', cursive;
+}
+
+.featured-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+.product-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 u jednom redu */
+    gap: 20px;
+    padding: 20px;
+}
+.item {
+    background-color: #FFFFFF;
+    padding: 15px;
+    border: 1px solid #E0E0E0;
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%
+}
+
+.item:hover {
+    transform: translateY(-5px);
+}
+
+.item img {
+    width: 100%;
+    max-height: 200px;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+.item h3 {
+    margin: 15px 0;
+    font-size: 1.2rem;
+    color: #2d6a4f;
+
+}
+.proizvodi-section .product-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: flex-start;
+    padding: 0;
+    margin: 0;
+    width: 100vw;
+    box-sizing: border-box;
+    margin-bottom: 80px;
+}
+
+.proizvodi-section .product-list .item {
+    width: 280px;
+    min-height: 450px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 0;              /* nema dodatnih margina */
+    box-sizing: border-box;
+}
+
+.proizvodi-section .product-list .item img {
+    width: 100%;      /* slika zauzima punu širinu kartice */
+    height: 220px;    /* visina slike */
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.proizvodi-section .product-list .item h3 {
+    margin: 10px 0 5px;
+    font-size: 1.2rem;
+}
+
+.proizvodi-section .product-list .item .cijena {
+    font-weight: 600;
+    margin-bottom: 6px;  /* manja margina ispod cene za poravnanje sa dugmetom */
+    color: darkolivegreen;
+    align-self: stretch; /* da cena bude iste širine kao dugme */
+    text-align: center;
+}
+
+.proizvodi-section .product-list .item .button {
+    margin-top: 0;     /* ukloni marginu da cena i dugme budu blizu */
+    background-color: darkolivegreen;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    width: 100%;       /* dugme zauzima celu širinu kartice */
+    box-sizing: border-box;
+    transition: background-color 0.3s;
+}
+
+.proizvodi-section .product-list .item .button:hover {
+    background-color: #556b2f;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #61884B;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #2F3E2E;
+}
+.dugme-korpa {
+    .button {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #61884B;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5px;
+        font-weight: bold;
+        transition: background-color 0.3s;
+    }
+
+    .button:hover {
+        background-color: #2F3E2E;
+    }
+}
+
+footer {
+    background-color: #61884B;
+    color: #F5F0E6;
+    text-align: center;
+    padding: 0;
+}
+
+ul.form-box {
+    list-style: none;
+    margin: 0;
+    background-color: #E0E0E0;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+ul.form-box li {
+    margin: 10px 0;
+}
+
+ul.form-box a {
+    color: #4A7C59;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+ul.form-box a:hover {
+    text-decoration: underline;
+}
+
+img[src*="logo.jpg"] {
+    display: block;
+    margin: 20px auto;
+    width: 80px;
+    border-radius: 50%;
+}
+h1 {
+    color: #61884B;
+    font-size: 40px;
+    text-align: center;
+    justify-content: space-between;
+}
+
+h4 {
+    font-family: 'Sacramento', cursive;
+    color: #61884B;
+    font-size: 45px;
+
+    text-align: center;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+}
+h3 {
+    color: #61884B;
+    font-size: 30px;
+    text-align: center;
+    margin: 10px auto;
+    max-width: 800px;
+
+}
+
+p{
+    font-family: 'Poppins', sans-serif;
+    color: #2F3E2E;
+}
+
+.footer-layout {
+    width: 100vw;            /* puna širina preglednika */
+    margin: 0;
+    background-color: #F5F0E6;  /* ili druga boja pozadine po želji */
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;         /* omogućava responsive raspored na mobilnim uređajima */
+    box-sizing: border-box;
+}
+.footer-box {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0; /* uklonjen padding */
+    margin: 0;
+    width: 100%;
+    box-sizing: border-box;
+    margin-left: 0;
+}
+
+
+.proizvod-detalji-container {
+    padding: 2rem;
+}
+
+.proizvod-detalji {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    max-width: 1200px;
+    width: 100%;
+    margin-left: 0;
+    flex-wrap: wrap; /* za responsive */
+}
+
+.proizvod-detalji img {
+    flex-shrink: 0;
+    width: 400px !important;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+
+.detalji-tekst {
+    margin-left: 70px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+}
+
+.detalji-tekst h1 {
+    margin-bottom: 1rem;
+}
+
+.detalji-tekst p {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.detalji-tekst .button {
+    align-self: flex-start;
+    margin: 0 auto;
+    display: block;/* da dugme ne bude široko preko cele širine */
+    margin-bottom: 30px;
+}
+
+.custom-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none !important;
+    border: none !important;
+    outline: none !important;
+    color: #59663D;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 0;
+    user-select: none;
+}
+
+.custom-arrow:focus,
+.custom-arrow:active {
+    background: none !important;
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+.left-arrow {
+    left: -20px; /* pomjeri lijevu strelicu lijevo izvan slike */
+}
+
+.right-arrow {
+    right: -20px; /* pomjeri desnu strelicu desno izvan slike */
+}
+
+.opis-proizvoda {
+    white-space: pre-line;
+    color: #4a4a4a;
+}
+.cijena-proizvoda {
+    margin-top: auto;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #2e7d32; /* neka bude zelena ili po želji */
+    margin: 0.5rem 0;
+}
+.cijena {
+    font-weight: bold;
+    color: #2d6a4f;
+    margin: 8px 0;
+}
+.scroll-to-top {
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: none;
+    border: none;
+    font-size: 30px;
+    color: #000;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+
+.scroll-to-top:hover {
+    color: #59663D;
+}
+
+
+.caj-tekst-container {
+    width: 100%;
+    cursor: pointer;
+    user-select: none;
+    margin-bottom: 30px;
+}
+
+.naslov-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    width: 100%;
+}
+
+.naslov-tekst {
+    color: #61884B;
+    font-weight: bold;
+    font-size: 1.8rem;
+    flex-grow: 1;
+    text-align: left;
+    font-family: 'Sacramento', cursive;
+    white-space: normal;
+    word-break: normal;
+    overflow-wrap: break-word;
+}
+
+.toggle-arrow {
+    font-size: 1.6rem;
+    transition: transform 0.3s ease;
+    user-select: none;
+    color: #2F3E2E;
+    font-weight: 100;
+}
+
+.toggle-arrow.open {
+    transform: rotate(90deg);
+}
+
+.caj-tekst {
+
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.5s ease, opacity 0.5s ease;
+    color: #61884B;;
+    width: 100%;
+    margin-top: 8px;
+}
+
+.caj-tekst.open {
+    max-height: 200px;
+    opacity: 1;
+}
+
+.kolicina-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 1rem 0;
+}
+
+.kolicina-container button {
+    background-color: #33532c;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 6px 14px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    user-select: none;
+}
+
+.kolicina-container button:hover {
+    background-color: #496f34;
+}
+
+.kolicina-container span {
+    min-width: 30px;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #2f3e2e;
+}
+
+.button {
+    background-color: darkolivegreen;
+    color: white;
+    padding: 10px 25px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #33532c;
+}
+.kolicina-label {
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: #2f3e2e;
+    margin-bottom: 0.4rem;
+}
+
+
+
+.burger-btn {
+    display: none;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: darkolivegreen;
+    cursor: pointer;
+    z-index: 1100;
+}
+
+.mobile-menu-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1049;
+}
+
+.mobile-menu-overlay.active {
+    display: block;
+}
+
+.mobile-menu {
+    display: none;
+    position: fixed;
+    top: 150px;
+    left: -100%;
+    width: 70%;
+    height: calc(100% - 100px);
+    background-color: #F5F0E6;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.3);
+    padding: 40px 20px;
+    transition: left 0.3s ease;
+    z-index: 1050;
+    overflow-y: auto;
+    margin-left: 10px;
+
+}
+
+.mobile-menu.open {
+    left: 0;
+    display: block;
+}
+
+.mobile-menu .menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: left;
+}
+
+.mobile-menu .menu li {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.mobile-menu .menu li a {
+    text-decoration: none;
+    color: darkolivegreen;
+    font-size: 1.2rem;
+    text-align: left;
+}
+
+@media (max-width: 768px) {
+    .burger-btn {
+        display: block;
+        position: absolute;
+        left: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        background: none;
+        border: none;
+        font-size: 2rem;
+        cursor: pointer;
+        z-index: 1101;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .logo {
+        position: relative;
+        left: auto;
+        transform: none;
+        margin: 0 auto;
+    }
+
+    .logo img {
+        width: 30px;
+        height: auto;
+    }
+
+    .header-box {
+        padding: 20px 15px;
+        height: 100px;
+        background-color: #F3EDE0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        z-index: 1100;
+    }
+
+    .search-box input {
+        display: none;
+    }
+
+    .search-box button {
+        font-size: 1.6rem;
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .kartica {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .header-right .search-box {
+        display: none;
+    }
+
+    .header-right {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .icon-btn {
+        font-size: 1.6rem;
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+}
+
+@media (min-width: 769px) {
+    .burger-btn,
+    .mobile-menu,
+    .mobile-menu-overlay {
+        display: none;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .proizvodi-section .product-list {
+        display: flex;
+        flex-wrap: nowrap;           /* NE dozvoljava prelazak u novi red */
+        gap: 20px;
+        overflow-x: auto;            /* omogućava horizontalni scroll */
+        scroll-snap-type: x mandatory;
+        padding: 0 20px;
+        margin: 0;
+        width: 100vw;
+        box-sizing: border-box;
+        margin-bottom: 80px;
+    }
+
+    .proizvodi-section .product-list::-webkit-scrollbar {
+        height: 6px;
+    }
+
+    .proizvodi-section .product-list::-webkit-scrollbar-thumb {
+        background: darkolivegreen;
+        border-radius: 3px;
+    }
+
+    .proizvodi-section .product-list .item {
+        flex: 0 0 auto;              /* sprječava rastezanje i dozvoljava horizontalni raspored */
+        width: 260px;
+        min-height: 450px;
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin: 0;
+        box-sizing: border-box;
+        scroll-snap-align: start;   /* svaki item "klakne" u scroll-u */
+    }
+
+    .proizvodi-section .product-list .item img {
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+        border-radius: 8px;
+        margin-bottom: 15px;
+    }
+
+    .proizvodi-section .product-list .item h3 {
+        margin: 10px 0 5px;
+        font-size: 1.2rem;
+    }
+
+    .proizvodi-section .product-list .item .cijena {
+        font-weight: 600;
+        margin-bottom: 6px;
+        color: darkolivegreen;
+        align-self: stretch;
+        text-align: center;
+    }
+
+    .proizvodi-section .product-list .item .button {
+        margin-top: 0;
+        background-color: darkolivegreen;
+        color: white;
+        padding: 10px 18px;
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: 600;
+        width: 100%;
+        box-sizing: border-box;
+        transition: background-color 0.3s;
+    }
+
+    .proizvodi-section .product-list .item .button:hover {
+        background-color: #556b2f;
+    }
+
+    .footer-layout {
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        padding: 20px;
+        overflow-x: auto;
+        gap: 15px;
+    }
+
+    .social-icons {
+        margin-left: 0 !important;
+        margin-top: 10px;
+        margin-bottom: 10px !important;
+    }
+
+    .social-icons a {
+        margin-left: 0 !important;
+    }
+
+    .social-icons svg {
+        width: 25px;
+        height: 25px;
+        margin-left: 0;
+        text-align: left;
+    }
+
+    .footer-left,
+    .footer-center,
+    .footer-right {
+        min-width: 200px;
+        flex: 0 0 auto;
+    }
+
+    .footer-center p,
+    .footer-center a,
+    .social-icons,
+    .footer-menu {
+        margin-left: 0 !important;
+        text-align: left !important;
+    }
+    .footer-left h2{
+        font-size: 28px;
+        text-align: left !important;
+    }
+
+    .footer-center p,
+    .footer-center a{
+        font-size: 18px !important;
+    }
+
+    .footer-left p,
+    .footer-center p,
+    .footer-center a,
+    .footer-menu li,
+    .footer-menu a {
+        text-align: left !important;
+        font-size: 18px;
+    }
+
+    .footer-center p {
+        margin-top: 5px !important;
+        font-size: 20px;
+    }
+
+    .footer-menu {
+        margin-left: 0 !important;
+    }
+
+    .footer-right {
+        margin-top: 0 !important;}
+
+}
+
+@media screen and (max-width: 768px) {
+    .proizvod-detalji {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .proizvod-detalji img {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .detalji-tekst {
+        margin-left: 0;
+        margin-top: 1rem;
+        text-align: left;
+    }
+}
+

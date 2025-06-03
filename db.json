@@ -1,0 +1,120 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "ime": "Ines",
+      "email": "ines@admin.com",
+      "password": "1234",
+      "role": "admin"
+    },
+    {
+      "id": "2",
+      "ime": "Selma",
+      "email": "selma@admin.com",
+      "password": "1234",
+      "role": "admin"
+    },
+    {
+      "id": "3",
+      "ime": "Aida",
+      "email": "aida@admin.com",
+      "password": "1234",
+      "role": "admin"
+    },
+    {
+      "id": "4",
+      "ime": "Neko",
+      "email": "neko@gost.com",
+      "password": "1234",
+      "role": "guest"
+    },
+    {
+      "id": "130b",
+      "ime": "MAja",
+      "email": "maja@size.ba",
+      "password": "1111",
+      "role": "gost"
+    },
+    {
+      "id": "392c",
+      "ime": "Ines",
+      "email": "hahah@size.ba",
+      "password": "11111",
+      "role": "gost"
+    },
+    {
+      "id": "1559",
+      "ime": "",
+      "email": "",
+      "password": "",
+      "role": "gost"
+    },
+    {
+      "id": "0c7d",
+      "ime": "",
+      "email": "",
+      "password": "",
+      "role": "gost"
+    },
+    {
+      "id": "0d37",
+      "ime": "",
+      "email": "",
+      "password": "",
+      "role": "gost"
+    },
+    {
+      "id": "c1a4",
+      "ime": "Maja",
+      "email": "maja@size.ba",
+      "password": "1111",
+      "role": "gost"
+    },
+    {
+      "id": "62ff",
+      "ime": "Maja",
+      "email": "maja@size.ba",
+      "password": "1234",
+      "role": "gost"
+    }
+  ],
+  "products": [],
+  "messages": [
+    {
+      "id": "098c",
+      "ime": "Selma",
+      "email": "selma.skulj.24@size.ba",
+      "poruka": "Test2",
+      "datum": "03. 06. 2025. 21:30:26"
+    }
+  ],
+  "tim": [
+    {
+      "id": 1,
+      "ime": "Ines",
+      "slika": "/slike/Ines.png",
+      "opis": "Stručnjakinja za aromaterapiju i biljnu njegu. Donosi znanje iz botanike i ljubav prema prirodi."
+    },
+    {
+      "id": 2,
+      "ime": "Aida",
+      "slika": "/slike/Aida1.png",
+      "opis": "Organizatorka tima i kreativna snaga marketinga. Uvijek donosi novu energiju i ideje."
+    },
+    {
+      "id": 3,
+      "ime": "Selma",
+      "slika": "/slike/Selma.png",
+      "opis": "Inicijator projekta i stručnjakinja za prirodnu kozmetiku. Brine o kvaliteti svakog proizvoda."
+    }
+  ],
+  "poruke": [
+    {
+      "id": "9c00",
+      "ime": "Selma",
+      "email": "selma.skulj.24@size.ba",
+      "poruka": "Terstiranje kontakta",
+      "datum": "2025-06-03T19:15:19.830Z"
+    }
+  ]
+}

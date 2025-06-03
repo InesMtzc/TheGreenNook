@@ -1,0 +1,652 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* GLOBAL STILOVI */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #FFFBF6 !important;
+    color: #333333;
+    line-height: 1.6;
+}
+
+/* HEADER */
+header {
+    background-color: #61884B;
+    color: #F5F0E6;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.header-box {
+    z-index: 1000;
+    background-color: #F3EDE0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 30px 10px;
+}
+
+.header-box nav ul.menu {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+    margin: 0;
+    padding: 20px;
+}
+
+.header-box nav ul.menu li a {
+    color: #59663D;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.header-box nav ul.menu li a:hover {
+    background-color: #abb599;
+}
+
+.header-box .logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    z-index: 10;
+}
+
+.header-box .logo img {
+    width: 90px;
+    height: auto;
+    border-radius: 50%;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-left: auto;
+}
+
+.header-right .search-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.header-right .search-box input {
+    padding: 6px 35px 6px 12px;
+    border-radius: 20px;
+    border: 1.5px solid #61884B;
+    background-color: #F3EDE0;
+    color: #333;
+    width: 160px;
+    transition: border-color 0.3s ease;
+}
+
+.header-right .search-box input::placeholder {
+    color: #61884B;
+    opacity: 0.7;
+}
+
+.header-right .search-box input:focus {
+    border-color: darkmagenta;
+    background-color: floralwhite;
+    color: #61884B;
+}
+
+.header-right .search-box button.search-btn {
+    position: absolute;
+    right: 8px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1rem;
+    color: #61884B;
+}
+
+.header-right .search-box button.search-btn:hover {
+    color: darkmagenta;
+}
+
+.header-right .icon-btn {
+    font-size: 1.6rem;
+    color: #61884B;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.header-right .icon-btn:hover {
+    color: darkmagenta;
+}
+
+/* SEKCIJE */
+
+/* O nama sekcija - sa pozadinom i okvirom */
+.onama-section {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 30px 25px;
+    color: #333333;
+    background-color: #F5F0E6;
+    border-radius: 12px;
+    overflow-wrap: break-word;
+}
+
+.nas-tim-section {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.nas-tim-section h2 {
+    margin-bottom: 30px;
+    font-size: 2rem;
+    color: #4A7C59;
+    font-family: "Playfair Display SC", serif;
+}
+
+.kartice-tima {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.kartica-clana {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 20px;
+    max-width: 250px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.kartica-clana:hover {
+    transform: scale(1.05);
+}
+
+.kartica-clana img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.nas-tim-section h2 {
+    font-family: "Playfair Display SC", sans-serif;
+
+}
+
+.kartica-clana h3 {
+    font-family: "Playfair Display SC", sans-serif;
+    margin: 10px 0 5px;
+    font-size: 1.2rem;
+    color: #388e3c;
+}
+
+.kartica-clana p {
+    font-family: "Poppins", sans-serif;
+    font-size: 0.95rem;
+    color: #444;
+}
+
+/* Priča sekcija - bez pozadine i okvira, tekst lijevo */
+.prica-section {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 25px;
+    color: #333333;
+}
+
+/* Naslovi sekcija */
+.onama-section h1,
+.prica-section h2,
+.prica-section h3,
+.dostava-section h1,
+.ekoloska-obaveza-section h2,
+.ekoloska-obaveza-section h3 {
+    font-family: 'Playfair Display SC', serif;
+    color: #4A7C59;
+    /* Poravnanje naslova lijevo */
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+/* Paragrafi i tekst */
+.onama-section p,
+.prica-section p,
+.dostava-section p,
+.ekoloska-obaveza-section p,
+.ekoloska-obaveza-section li,
+.ekoloska-obaveza-section blockquote {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: #2F3E2E;
+    text-align: left;
+}
+
+/* Posebni stilovi */
+.prica-section h2 {
+    font-size: 2rem;
+    margin-top: 40px;
+}
+
+.prica-section h3 {
+    font-size: 1.5rem;
+    margin-top: 30px;
+    color: #61884B;
+}
+
+.prica-section {
+    /* Uklonjen box-shadow i background */
+}
+
+.dostava-section {
+    padding: 30px 25px;
+}
+/* EKOLOŠKA OBAVEZA - SEKCIJA BEZ OKVIRA I POZADINE */
+.ekoloska-obaveza-section {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 25px;
+    color: #333333;
+    background-color: transparent; /* uklonjena pozadina */
+    border-radius: 0; /* uklonjen zaobljeni okvir */
+    text-align: left; /* tekst poravnat levo */
+}
+
+/* Naslovi u ekoloska-obaveza */
+.ekoloska-obaveza-section h2,
+.ekoloska-obaveza-section h3 {
+    font-family: 'Playfair Display SC', serif;
+    color: #4A7C59;
+    text-align: left;
+    margin-bottom: 20px;
+    font-size: 27px;
+}
+
+/* Paragrafi i ostali tekst */
+.ekoloska-obaveza-section p,
+.ekoloska-obaveza-section li,
+.ekoloska-obaveza-section blockquote {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: #2F3E2E;
+    text-align: left;
+}
+
+/* Stil za blockquote ostaje isti */
+.ekoloska-obaveza-section blockquote {
+    font-style: italic;
+    background-color: #F5F0E6;
+    border-left: 5px solid #6ccf7c;
+    padding: 0.5rem 1rem;
+    margin-bottom: 30px;
+}
+
+/* Stil za liste */
+.ekoloska-obaveza-section ul {
+    padding-left: 1.5rem;
+    list-style-type: disc;
+    margin-top: 10px;
+}
+
+.ekoloska-obaveza-section .eko-tekst-slika img {
+    margin-top: 70px;
+}
+
+/* TEKST + SLIKA LAYOUT za duže tekstove */
+
+.eko-tekst-slika {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+}
+
+.eko-tekst-slika.reverse {
+    flex-direction: row-reverse;
+}
+
+.eko-tekst-slika .tekst {
+    flex: 1;
+    text-align: left;
+}
+
+.eko-tekst-slika img {
+    flex: 1;
+    max-width: 450px;
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    object-fit: cover;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .ekoloska-obaveza-section {
+        padding: 20px 15px;
+    }
+
+    .ekoloska-obaveza-section h2,
+    .ekoloska-obaveza-section h3 {
+        font-size: 1.4rem;
+        margin-bottom: 15px;
+    }
+
+    .ekoloska-obaveza-section p,
+    .ekoloska-obaveza-section li,
+    .ekoloska-obaveza-section blockquote {
+        font-size: 1rem;
+    }
+
+    .eko-tekst-slika {
+        flex-direction: column !important;
+        margin-bottom: 30px;
+    }
+
+    .eko-tekst-slika img {
+        max-width: 100%;
+        margin-bottom: 15px;
+    }
+}
+
+/* SLIKE + TEKST LAYOUT */
+.tekst-slika {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 60px;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.tekst-slika.reverse {
+    flex-direction: row-reverse;
+}
+
+.tekst-slika .tekst {
+    flex: 1;
+    text-align: left;
+}
+
+.tekst-slika img {
+    flex: 1;
+    max-width: 500px;
+    width: 100%;
+    height: auto;
+    border-radius: 16px;
+    object-fit: cover;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* SLIKE */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+    .header-right .search-box input {
+        width: 120px;
+        font-size: 0.85rem;
+    }
+
+    .header-right .icon-btn {
+        font-size: 1.3rem;
+    }
+
+    .onama-section,
+    .prica-section,
+    .dostava-section,
+    .ekoloska-obaveza-section {
+        margin: 20px 15px;
+        padding: 20px 15px;
+    }
+
+    .onama-section h1,
+    .prica-section h2,
+    .prica-section h3,
+    .dostava-section h1,
+    .ekoloska-obaveza-section h2,
+    .ekoloska-obaveza-section h3 {
+        font-size: 1.4rem;
+    }
+
+    .prica-section h2 {
+        margin-top: 25px;
+    }
+
+    .tekst-slika {
+        flex-direction: column !important;
+        margin-bottom: 40px;
+    }
+
+    .tekst-slika img {
+        max-width: 100%;
+        margin-bottom: 15px;
+    }
+}
+
+.ekoloska-obaveza-section h2, .ekoloska-obaveza-section h3{
+    text-align: center;
+}
+
+.dostava-section {
+    background-color: #F5F0E6;
+    border: 2px solid #4a7c59;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 40px auto;
+    max-width: 700px;
+    font-family: "Arial", sans-serif;
+    color: #355e3b;
+    box-shadow: 0 2px 8px rgba(74, 124, 89, 0.3);
+}
+
+.dostava-section h2 {
+    font-family: "Playfair Display SC", serif;
+    font-size: 28px;
+    margin-bottom: 15px;
+    text-align: center;
+    color: #4a7c59;
+}
+
+.dostava-section p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 8px 0;
+    text-align: center;
+}
+
+
+.burger-btn {
+    display: none;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: darkolivegreen;
+    cursor: pointer;
+    z-index: 1100;
+}
+
+.mobile-menu-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1049;
+}
+
+.mobile-menu-overlay.active {
+    display: block;
+}
+
+.mobile-menu {
+    display: none;
+    position: fixed;
+    top: 150px;
+    left: -100%;
+    width: 70%;
+    height: calc(100% - 100px);
+    background-color: #F5F0E6;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.3);
+    padding: 40px 20px;
+    transition: left 0.3s ease;
+    z-index: 1050;
+    overflow-y: auto;
+    margin-left: 10px;
+
+}
+
+.mobile-menu.open {
+    left: 0;
+    display: block;
+}
+
+.mobile-menu .menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: left;
+}
+
+.mobile-menu .menu li {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.mobile-menu .menu li a {
+    text-decoration: none;
+    color: darkolivegreen;
+    font-size: 1.2rem;
+    text-align: left;
+}
+
+@media (max-width: 768px) {
+    .burger-btn {
+        display: block;
+        position: absolute;
+        left: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        background: none;
+        border: none;
+        font-size: 2rem;
+        cursor: pointer;
+        z-index: 1101;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .logo {
+        position: relative;
+        left: auto;
+        transform: none;
+        margin: 0 auto;
+    }
+
+    .logo img {
+        width: 30px;
+        height: auto;
+    }
+
+    .header-box {
+        padding: 20px 15px;
+        height: 100px;
+        background-color: #F3EDE0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        z-index: 1100;
+    }
+
+    .search-box input {
+        display: none;
+    }
+
+    .search-box button {
+        font-size: 1.6rem;
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .kartica {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .header-right .search-box {
+        display: none;
+    }
+
+    .header-right {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .icon-btn {
+        font-size: 1.6rem;
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+}
+
+@media (min-width: 769px) {
+    .burger-btn,
+    .mobile-menu,
+    .mobile-menu-overlay {
+        display: none;
+    }
+}

@@ -1,0 +1,11 @@
+
+
+.footer {
+    background-color: #61884B; /* Svijetla pozadina za footer */
+    text-align: center;
+    padding: 15px 0;
+    font-size: 14px;
+    color: #F5F0E6; /* Tamno siva boja za tekst */
+    border-top: 1px solid #ddd; /* Tanka siva linija iznad footera */
+
+}
