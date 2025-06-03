@@ -302,6 +302,13 @@ h3 {
     margin: 10px auto;
     max-width: 800px;
 }
+.hero-subtitle {
+    font-family: 'Sacramento', cursive;
+    font-size: 50px;
+    color: white;
+    text-align: center;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+}
 
 h4 {
     font-family: 'Sacramento', cursive;

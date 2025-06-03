@@ -121,14 +121,18 @@ const proizvodi = [
 
 function ProizvodDetalji() {
     const { id } = useParams();  // dohvaća id iz URL-a
-    const proizvod = proizvodi.find(p => p.id === Number(id));
 
+    const proizvod = proizvodi.find(p => p.id === Number(id));
     const [trenutnaSlika, setTrenutnaSlika] = useState(0);
     const [kolicina, setKolicina] = useState(1);
+    const [poruka, setPoruka] = useState("");
+
     if (!proizvod) return <p>Proizvod nije pronađen.</p>;
+
     const ostaliProizvodi = proizvodi
         .filter(p => p.kategorija === proizvod.kategorija && p.id !== proizvod.id)
         .slice(0, 4);
+
     const imaViseSlika = Array.isArray(proizvod.slike) && proizvod.slike.length > 0;
     const slike = imaViseSlika ? proizvod.slike : [proizvod.slika];
 
@@ -139,16 +143,36 @@ function ProizvodDetalji() {
     const sljedeca = () => {
         setTrenutnaSlika((prev) => (prev + 1) % slike.length);
     };
-    const povecajKolicinu = () => setKolicina((k) => k + 1);
-    const smanjiKolicinu = () => setKolicina((k) => (k > 1 ? k - 1 : 1));
 
+    const povecajKolicinu = () => setKolicina(k => k + 1);
+    const smanjiKolicinu = () => setKolicina(k => (k > 1 ? k - 1 : 1));
+
+    // Nova funkcija sa porukom na vrhu
     const handleDodajUKorpu = (proizvod) => {
-        // Ovo je privremeno – u pravoj aplikaciji bi išlo u globalni state ili localStorage
-        console.log("Dodano u korpu:", proizvod.naziv);
-        alert(`${proizvod.naziv} je dodan u korpu, količina: ${kolicina}`);
+        setPoruka(`Proizvod "${proizvod.naziv}" je dodat u korpu, količina: ${kolicina}.`);
+        // Poruka nestaje posle 3 sekunde
+        setTimeout(() => {
+            setPoruka("");
+        }, 3000);
     };
+
     return (
         <div>
+            {poruka && (
+                <div style={{
+                    position: "fixed",
+                    top: 0,
+                    left: 0,
+                    width: "100%",
+                    backgroundColor: "#4caf50",
+                    color: "white",
+                    padding: "10px",
+                    textAlign: "center",
+                    zIndex: 1000
+                }}>
+                    {poruka}
+                </div>
+            )}
             <div className="header-box">
                 <div className="logo">
                     <img src="/slike/logo.jpg" alt="The Green Nook Logo" />
@@ -162,40 +186,27 @@ function ProizvodDetalji() {
                     </ul>
                 </nav>
                 <div className="header-right">
-                    {/* Pretraga */}
                     <div className="search-box">
                         <input type="text" placeholder="Pretraživanje..." />
-                        <button className="search-btn" aria-label="Pretraži">
-                            🔍
-                        </button>
+                        <button className="search-btn" aria-label="Pretraži">🔍</button>
                     </div>
-
-                    {/* Srce za omiljene */}
-                    <Link to="/favoriti" className="icon-btn" aria-label="Omiljeni proizvodi">
-                        ❤
-                    </Link>
-
-                    {/* Korpa */}
-                    <Link to="/korpa" className="icon-btn" aria-label="Korpa">
-                        🛒
-                    </Link>
+                    <Link to="/favoriti" className="icon-btn" aria-label="Omiljeni proizvodi">❤</Link>
+                    <Link to="/korpa" className="icon-btn" aria-label="Korpa">🛒</Link>
                 </div>
             </div>
 
             <main className="proizvod-detalji-container">
                 <div className="proizvod-detalji">
                     <div className="slika-container" style={{ position: 'relative' }}>
-
-                        <img src={`/slike/${slike[trenutnaSlika]}`} alt={proizvod.naziv}  style={{ width: '300px', borderRadius: '10px' }} />
-
+                        <img
+                            src={`/slike/${slike[trenutnaSlika]}`}
+                            alt={proizvod.naziv}
+                            style={{ width: '300px', borderRadius: '10px' }}
+                        />
                         {imaViseSlika && (
                             <>
-                                <button onClick={prethodna} className="custom-arrow left-arrow">
-                                    &#8592;
-                                </button>
-                                <button onClick={sljedeca} className="custom-arrow right-arrow">
-                                    &#8594;
-                                </button>
+                                <button onClick={prethodna} className="custom-arrow left-arrow">&#8592;</button>
+                                <button onClick={sljedeca} className="custom-arrow right-arrow">&#8594;</button>
                             </>
                         )}
                     </div>
@@ -203,7 +214,10 @@ function ProizvodDetalji() {
                         <h1>{proizvod.naziv}</h1>
                         <p className="cijena-proizvoda">{proizvod.cijena} KM</p>
                         <p className="opis-proizvoda">{proizvod.opis}</p>
-                        <div className="kolicina-container" style={{ display: 'flex', alignItems: 'center', gap: '10px', margin: '1rem 0' }}>
+                        <div
+                            className="kolicina-container"
+                            style={{ display: 'flex', alignItems: 'center', gap: '10px', margin: '1rem 0' }}
+                        >
                             <button onClick={smanjiKolicinu} style={{ padding: '5px 10px' }}>-</button>
                             <span className="kolicina-broj">{kolicina}</span>
                             <button onClick={povecajKolicinu} style={{ padding: '5px 10px' }}>+</button>
@@ -211,13 +225,9 @@ function ProizvodDetalji() {
                         <button onClick={() => handleDodajUKorpu(proizvod)} className="button">
                             Dodaj u korpu
                         </button>
-
-
-
-
                     </div>
-
                 </div>
+
                 <footer className="form-box footer-layout">
                     <div className="footer-left">
                         <h2>Naša obećanja kupcima 🌿</h2>
@@ -230,7 +240,7 @@ function ProizvodDetalji() {
                     </div>
 
                     <div className="footer-center">
-                        <p style={{ marginTop: "60px"}}>✨ Biljni rituali</p>
+                        <p style={{ marginTop: "60px" }}>✨ Biljni rituali</p>
                         <p>🍵 Čajni trenuci</p>
                         <p>🧼 Njega tijela</p>
                         <a
@@ -242,7 +252,7 @@ function ProizvodDetalji() {
                         </a>
 
                         <div className="social-icons">
-                            <a href="https://www.instagram.com/thegreennook" target="_blank" rel="noreferrer" style={{ marginTop: "10px", marginLeft: "125px"}}>
+                            <a href="https://www.instagram.com/thegreennook" target="_blank" rel="noreferrer" style={{ marginTop: "10px", marginLeft: "125px" }}>
                                 <FaInstagram />
                             </a>
                             <a href="https://www.facebook.com/thegreennook" target="_blank" rel="noreferrer">
@@ -252,12 +262,11 @@ function ProizvodDetalji() {
                                 <FaTwitter />
                             </a>
                         </div>
-
                     </div>
 
                     <div className="footer-right">
                         <ul className="footer-menu">
-                            <li style={{ marginTop: "60px"}}><Link to="/onama">O nama</Link></li>
+                            <li style={{ marginTop: "60px" }}><Link to="/onama">O nama</Link></li>
                             <li><Link to="/proizvodi">Proizvodi</Link></li>
                             <li><Link to="/kontakt">Kontakt</Link></li>
                             <li><Link to="/login">Prijava</Link></li>
@@ -265,10 +274,8 @@ function ProizvodDetalji() {
                     </div>
                 </footer>
             </main>
-
         </div>
     );
 }
-
 
 export default ProizvodDetalji;
