@@ -3,6 +3,8 @@ import {Link, useParams} from 'react-router-dom';
 import "../assets/styles/proizvodi.css";
 import Header from "../components/header";
 import Footer from "../components/footer";
+import {FaFacebookF, FaInstagram, FaTwitter} from "react-icons/fa";
+
 
 const proizvodi = [
     { id: 1, naziv: "Prirodni čaj od divlje ruže i hibiskusa", slike: ["caj1.png","caj1a.webp"], opis: "Ovaj čaj predstavlja savršen spoj divlje ruže bogate vitaminom C i hibiskusa poznatog po svojim antioksidativnim svojstvima. " +
@@ -120,8 +122,13 @@ const proizvodi = [
 function ProizvodDetalji() {
     const { id } = useParams();  // dohvaća id iz URL-a
     const proizvod = proizvodi.find(p => p.id === Number(id));
+
     const [trenutnaSlika, setTrenutnaSlika] = useState(0);
+    const [kolicina, setKolicina] = useState(1);
     if (!proizvod) return <p>Proizvod nije pronađen.</p>;
+    const ostaliProizvodi = proizvodi
+        .filter(p => p.kategorija === proizvod.kategorija && p.id !== proizvod.id)
+        .slice(0, 4);
     const imaViseSlika = Array.isArray(proizvod.slike) && proizvod.slike.length > 0;
     const slike = imaViseSlika ? proizvod.slike : [proizvod.slika];
 
@@ -132,10 +139,13 @@ function ProizvodDetalji() {
     const sljedeca = () => {
         setTrenutnaSlika((prev) => (prev + 1) % slike.length);
     };
+    const povecajKolicinu = () => setKolicina((k) => k + 1);
+    const smanjiKolicinu = () => setKolicina((k) => (k > 1 ? k - 1 : 1));
+
     const handleDodajUKorpu = (proizvod) => {
         // Ovo je privremeno – u pravoj aplikaciji bi išlo u globalni state ili localStorage
         console.log("Dodano u korpu:", proizvod.naziv);
-        alert(`${proizvod.naziv} je dodan u korpu!`);
+        alert(`${proizvod.naziv} je dodan u korpu, količina: ${kolicina}`);
     };
     return (
         <div>
@@ -192,16 +202,68 @@ function ProizvodDetalji() {
                     <div className="detalji-tekst">
                         <h1>{proizvod.naziv}</h1>
                         <p className="cijena-proizvoda">{proizvod.cijena} KM</p>
-
-
                         <p className="opis-proizvoda">{proizvod.opis}</p>
+                        <div className="kolicina-container" style={{ display: 'flex', alignItems: 'center', gap: '10px', margin: '1rem 0' }}>
+                            <button onClick={smanjiKolicinu} style={{ padding: '5px 10px' }}>-</button>
+                            <span className="kolicina-broj">{kolicina}</span>
+                            <button onClick={povecajKolicinu} style={{ padding: '5px 10px' }}>+</button>
+                        </div>
                         <button onClick={() => handleDodajUKorpu(proizvod)} className="button">
                             Dodaj u korpu
                         </button>
 
+
+
+
                     </div>
 
                 </div>
+                <footer className="form-box footer-layout">
+                    <div className="footer-left">
+                        <h2>Naša obećanja kupcima 🌿</h2>
+                        <p>Prirodni sastojci bez kompromisa</p>
+                        <p>Ručna izrada s ljubavlju</p>
+                        <p>Transparentnost u sastavu</p>
+                        <p>Održivost i poštovanje prirode</p>
+                        <p>Podrška i povjerenje</p>
+                        <p>Zadovoljstvo zagarantovano</p>
+                    </div>
+
+                    <div className="footer-center">
+                        <p style={{ marginTop: "60px"}}>✨ Biljni rituali</p>
+                        <p>🍵 Čajni trenuci</p>
+                        <p>🧼 Njega tijela</p>
+                        <a
+                            href="https://www.instagram.com/thegreennook"
+                            target="_blank"
+                            rel="noreferrer"
+                        >
+                            👉 @thegreennook
+                        </a>
+
+                        <div className="social-icons">
+                            <a href="https://www.instagram.com/thegreennook" target="_blank" rel="noreferrer" style={{ marginTop: "10px", marginLeft: "125px"}}>
+                                <FaInstagram />
+                            </a>
+                            <a href="https://www.facebook.com/thegreennook" target="_blank" rel="noreferrer">
+                                <FaFacebookF />
+                            </a>
+                            <a href="https://twitter.com/thegreennook" target="_blank" rel="noreferrer">
+                                <FaTwitter />
+                            </a>
+                        </div>
+
+                    </div>
+
+                    <div className="footer-right">
+                        <ul className="footer-menu">
+                            <li style={{ marginTop: "60px"}}><Link to="/onama">O nama</Link></li>
+                            <li><Link to="/proizvodi">Proizvodi</Link></li>
+                            <li><Link to="/kontakt">Kontakt</Link></li>
+                            <li><Link to="/login">Prijava</Link></li>
+                        </ul>
+                    </div>
+                </footer>
             </main>
 
         </div>

@@ -15,7 +15,7 @@ html, body {
     height: 100vh;
     width: 100vw;
     overflow: hidden;
-    padding: 20px;
+    padding: 1.25rem; /* 20px */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -23,16 +23,16 @@ html, body {
 
 .register-wrapper form {
     background: transparent !important;
-    padding: 40px;
-    border-radius: 16px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    padding: 2.5rem; /* 40px */
+    border-radius: 1rem; /* 16px */
+    box-shadow: 0 0.5rem 1.25rem rgba(0, 0, 0, 0.3); /* 8px 20px */
     backdrop-filter: blur(5px);
     color: #FFFBF6;
     width: 100%;
-    max-width: 400px;
+    max-width: 25rem; /* 400px */
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 0.9375rem; /* 15px */
     font-family: 'Poppins', sans-serif;
 }
 
@@ -40,19 +40,19 @@ html, body {
     font-family: 'Playfair Display SC', serif;
     font-size: 2.5rem;
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 1.25rem; /* 20px */
     color: #F3EDE0;
 }
 
 .register-wrapper label {
     font-weight: bold;
-    margin-bottom: 5px;
+    margin-bottom: 0.3125rem; /* 5px */
     color: #F3EDE0;
 }
 
 .register-wrapper input {
-    padding: 12px;
-    border-radius: 6px;
+    padding: 0.75rem; /* 12px */
+    border-radius: 0.375rem; /* 6px */
     border: 2px solid #ccc;
     background-color: transparent;
     color: #FFFBF6;
@@ -69,21 +69,21 @@ html, body {
 .register-wrapper input:focus {
     border-color: #FFFBF6;
     outline: none;
-    color:  #61884B;
+    color: #61884B;
 }
 
 .register-wrapper button {
     background-color: darkmagenta;
     color: white;
     border: none;
-    padding: 12px;
-    border-radius: 7px;
+    padding: 0.75rem; /* 12px */
+    border-radius: 0.4375rem; /* 7px */
     font-size: 1rem;
     cursor: pointer;
     transition: background-color 0.3s;
     font-weight: bold;
     align-self: center;
-    margin-top: 10px;
+    margin-top: 0.625rem; /* 10px */
 }
 
 .register-wrapper button:hover {
@@ -95,7 +95,7 @@ html, body {
     text-align: center;
     font-size: 0.9rem;
     color: #F3EDE0;
-    margin-top: 10px;
+    margin-top: 0.625rem; /* 10px */
 }
 
 .register-wrapper a {
@@ -112,8 +112,8 @@ html, body {
     color: white;
     background-color: darkmagenta;
     border: none;
-    padding: 12px 24px;
-    border-radius: 7px;
+    padding: 0.75rem 1.5rem; /* 12px 24px */
+    border-radius: 0.4375rem; /* 7px */
     font-weight: bold;
     cursor: pointer;
     transition: background-color 0.3s;
@@ -126,7 +126,7 @@ html, body {
 
 .register-text {
     color: white;
-    margin-top: 10px;
+    margin-top: 0.625rem; /* 10px */
     font-size: 0.9rem;
     text-align: center;
 }
@@ -135,7 +135,7 @@ html, body {
     color: white;
     text-decoration: underline;
     font-weight: bold;
-    margin-left: 5px;
+    margin-left: 0.3125rem; /* 5px */
 }
 
 .register-text a:hover {

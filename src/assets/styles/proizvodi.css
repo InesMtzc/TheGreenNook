@@ -179,7 +179,8 @@ section {
 .item h3 {
     margin: 15px 0;
     font-size: 1.2rem;
-    color: #2F3E2E;
+    color: #2d6a4f;
+
 }
 
 .button {
@@ -260,15 +261,19 @@ h1 {
 
 h4 {
     font-family: 'Sacramento', cursive;
-    font-size: 50px;
-    color:  white;
+    color: #61884B;
+    font-size: 45px;
+
     text-align: center;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
 }
 h3 {
+    color: #61884B;
+    font-size: 30px;
     text-align: center;
     margin: 10px auto;
     max-width: 800px;
+
 }
 
 p{
@@ -379,4 +384,113 @@ p{
 
 .scroll-to-top:hover {
     color: #59663D;
+}
+
+
+.caj-tekst-container {
+    width: 100%;
+    cursor: pointer;
+    user-select: none;
+}
+
+.naslov-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    width: 100%;
+}
+
+.naslov-tekst {
+    color: #61884B;
+    font-weight: bold;
+    font-size: 1.8rem;
+    flex-grow: 1;
+    text-align: left;
+    font-family: 'Sacramento', cursive;
+    white-space: normal;
+    word-break: normal;
+    overflow-wrap: break-word;
+}
+
+.toggle-arrow {
+    font-size: 1.6rem;
+    transition: transform 0.3s ease;
+    user-select: none;
+    color: #2F3E2E;
+    font-weight: 100;
+}
+
+.toggle-arrow.open {
+    transform: rotate(90deg);
+}
+
+.caj-tekst {
+
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.5s ease, opacity 0.5s ease;
+    color: #61884B;;
+    width: 100%;
+    margin-top: 8px;
+}
+
+.caj-tekst.open {
+    max-height: 200px;
+    opacity: 1;
+}
+
+.kolicina-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 1rem 0;
+}
+
+.kolicina-container button {
+    background-color: #33532c;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 6px 14px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    user-select: none;
+}
+
+.kolicina-container button:hover {
+    background-color: #496f34;
+}
+
+.kolicina-container span {
+    min-width: 30px;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #2f3e2e;
+}
+
+.button {
+    background-color: darkolivegreen;
+    color: white;
+    padding: 10px 25px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #33532c;
+}
+.kolicina-label {
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: #2f3e2e;
+    margin-bottom: 0.4rem;
 }
