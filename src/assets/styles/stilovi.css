@@ -175,7 +175,7 @@ h4 {
 
     .hero-overlay {
         padding: 10px;
-        background-color: rgba(0, 0, 0, 0.4); /* malo jače sjenčenje da se vidi tekst */
+        background-color: rgba(0, 0, 0, 0.4);
     }
 
     .hero-title {
@@ -207,16 +207,15 @@ h4 {
 
 }
 @media screen and (max-width: 768px) {
-    /* Centriraj h4 naslov */
+
     .instagram-section h4 {
         text-align: center;
         margin-bottom: 20px;
     }
 
-    /* Instagram info ostaje u redu (row), ali poravnaj lijevo */
     .instagram-info {
-        flex-direction: row !important; /* red umjesto kolone */
-        align-items: center !important; /* vertikalno centrirano */
+        flex-direction: row !important;
+        align-items: center !important;
         margin-left: 0 !important;
         gap: 15px !important;
         padding-left: 20px;
@@ -301,9 +300,9 @@ section.featured h2 {
 }
 
 .featured .item img {
-    max-height: 280px; /* ili više ako želiš još veće slike /
+    max-height: 280px;
     width: 100%;
-    object-fit: cover; / koristi "cover" za popunjavanje bez razmaka */
+    object-fit: cover;
     border-radius: 10px;
     margin-bottom: 15px;
 }
@@ -607,7 +606,7 @@ p {
 }
 
 .mini-product:hover {
-    transform: scale(1.05); /* efekat zumiranja na hover */
+    transform: scale(1.05);
 }
 
 .footer-layout {
@@ -966,7 +965,7 @@ p {
     .features-icons {
         display: flex;
         justify-content: center;
-        align-items: stretch; /* da svi feature-icon elementi imaju istu visinu */
+        align-items: stretch;
         gap: 100px;
         margin-left: 40px;
         margin-bottom: 70px;
@@ -976,12 +975,12 @@ p {
     .feature-icon {
         display: flex;
         align-items: center;
-        gap: 20px; /* smanji razmak između ikone i teksta */
-        font-size: 16px; /* malo smanji font teksta */
+        gap: 20px;
+        font-size: 16px;
     }
 
     .feature-icon svg {
-        width: 40px !important;  /* smanji veličinu SVG ikona */
+        width: 40px !important;
         height: 40px !important;
     }
 
@@ -1004,19 +1003,19 @@ p {
 
     .featured-items .item {
         flex: 0 0 auto;
-        width: 250px; /* ili koliko ti paše */
+        width: 250px;
         height: 550px;
         scroll-snap-align: start;
         background: #fff;
         border-radius: 10px;
         padding: 20px;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-        margin-bottom: 0; /* ukloni margine ako ima */
+        margin-bottom: 0;
     }
     .featured-items .item img {
-        width: 100%;       /* da zauzme širinu kartice */
-        height: 200px;     /* fiksna visina za sve slike */
-        object-fit: cover; /* da slika pokrije zadati prostor bez deformacije */
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
         border-radius: 8px;
         margin-bottom: 15px;
     }
@@ -1091,4 +1090,17 @@ p {
     .footer-right {
         margin-top: 0 !important;}
 
+}
+    .notifikacija {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #61884B;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    z-index: 1000;
+    font-weight: bold;
+    font-size: 1rem;
 }

@@ -189,12 +189,10 @@ function Kontakt() {
                             loading="lazy"
                             referrerPolicy="no-referrer-when-downgrade"
                         ></iframe>
-
                     </div>
                 </main>
             </div>
         </div>
-
     );
 }
 

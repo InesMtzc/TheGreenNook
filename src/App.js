@@ -45,9 +45,7 @@ function App() {
                 <Routes>
                     {/* Login ruta sa LoginForma i prop onLogin */}
                     <Route path="/login" element={<LoginForma onLogin={setUlogovaniKorisnik} />} />
-
                     <Route path="/signup" element={<RegisterForma />} />
-
                     <Route path="/" element={<Pocetna />} />
                     <Route path="/onama" element={
                         <>

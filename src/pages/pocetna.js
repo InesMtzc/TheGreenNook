@@ -4,86 +4,33 @@ import { FaTruck, FaHeart, FaShieldAlt } from 'react-icons/fa';
 import { FaInstagram, FaFacebookF, FaTwitter } from "react-icons/fa";
 import Header from '../components/header';
 import Footer from '../components/footer';
-import React, { useState } from 'react';
+import React, { useState, useEffect} from 'react';
 
 function Pocetna() {
 
-    const proizvodi = [
-        {
-            slika: "ulje10.png",
-            naziv: "Eterična ulja",
-            opis: "Prirodna ulja dobijena destilacijom biljaka, idealna za aromaterapiju."
-        },
-        {
-            slika: "sapun6.png",
-            naziv: "Organski sapuni",
-            opis: "Ručno rađeni sapuni sa organskim sastojcima, nežni za kožu."
-        },
-        {
-            slika: "caj5.png",
-            naziv: "Prirodni čajevi",
-            opis: "Mješavine ljekovitih biljaka za zdrav i ukusan napitak."
-        },
-        {
-            slika: "krema1.png",
-            naziv: "Organske kreme",
-            opis: "Hidratantne kreme sa prirodnim ekstraktima za negu kože."
-        }
-    ];
+    const [nasaponuda, setnasaponuda] = useState([]);
+    useEffect(() => {
+        fetch("http://localhost:3000/nasaponuda")
+            .then(res => res.json())
+            .then(data => setnasaponuda(data))
+            .catch(err => console.error("Greška prilikom dohvata:", err));
+    }, []);
 
-    const najtrazenijiProizvodi = [
-        {
-            slika: "ulje3.png",
-            naziv: "Ulje ruzmarina",
-            opis: "Prirodno ulje ruzmarina za osveženje i opuštanje.",
-            cijena: "13.95 "
-        },
-        {
-            slika: "sapun2.png",
-            naziv: "Sapun od divljeg meda",
-            opis: "Hranljivi sapun sa medom iz prirode, nežan za kožu.",
-            cijena: "4.95 "
-        },
-        {
-            slika: "caj4.png",
-            naziv: "Čaj od lavande i valerijane",
-            opis: "Smirujuća mešavina lavande i valerijane za bolji san.",
-            cijena: "5.95 "
-        },
-        {
-            slika: "krema4.png",
-            naziv: "Krema sa uljem masline",
-            opis: "Hidratantna krema sa hranljivim uljem masline.",
-            cijena: "17.95 "
-        }
-    ];
+    const [najtrazenijiproizvodi, setnajtrazenijjiproizvodi] = useState([]);
+    useEffect(() => {
+        fetch("http://localhost:3000/najtrazenijiproizvodi")
+            .then(res => res.json())
+            .then(data => setnajtrazenijjiproizvodi(data))
+            .catch(err => console.error("Greška prilikom dohvata:", err));
+    }, []);
 
-    const noviProizvodi = [
-        {
-            slika: "ulje6.png",
-            naziv: "Ulje lavande",
-            opis: "Čisto eterično ulje lavande, idealno za aromaterapiju.",
-            cijena: "17.95 "
-        },
-        {
-            slika: "sapun6.png",
-            naziv: "Vrtni sapun",
-            opis: "Ručno rađeni sapun sa mirisom cveća iz vrta.",
-            cijena: "5.95 "
-        },
-        {
-            slika: "caj5.png",
-            naziv: "Čaj od kamilice",
-            opis: "Prirodni čaj sa kamilicom za opuštanje i smirenje.",
-            cijena: "4.95 "
-        },
-        {
-            slika: "krema1.png",
-            naziv: "Krema od slatke naranče",
-            opis: "Osvježavajuća krema sa ekstraktom slatke naranče.",
-            cijena: "11.95 "
-        }
-    ];
+    const [noviproizvodi, setnoviproizvodi] = useState([]);
+    useEffect(() => {
+        fetch("http://localhost:3000/noviproizvodi")
+            .then(res => res.json())
+            .then(data => setnoviproizvodi(data))
+            .catch(err => console.error("Greška prilikom dohvata:", err));
+    }, []);
 
     const instagramSlike = [
         "caj7.png",
@@ -117,7 +64,7 @@ function Pocetna() {
     return (
         <>
             {poruka && (
-                <div style={{position: "fixed", top: 0, left: 0, width: "100%", backgroundColor: "#4caf50", color: "white", padding: "10px", textAlign: "center", zIndex: 1000}}>
+                <div className="notifikacija">
                     {poruka}
                 </div>
             )}
@@ -205,8 +152,8 @@ function Pocetna() {
                     <section className="featured">
                         <h2>Naša ponuda</h2>
                         <div className="featured-items">
-                            {proizvodi.map(({ slika, naziv, opis }, i) => (
-                                <div className="item" key={`najtrazeniji-${i}`}>
+                            {nasaponuda.map(({ id,slika, naziv, opis }, i) => (
+                                <div className="item" key={id}>
                                     <img src={`/slike/${slika}`} alt={naziv} />
                                     <h3 style={{ textAlign: "center", fontSize: "35px", fontFamily: "Sacramento, cursive", color: "darkolivegreen" }}>
                                         {naziv}
@@ -223,9 +170,9 @@ function Pocetna() {
                     <section className="featured">
                         <h2>Najtraženiji proizvodi</h2>
                         <div className="featured-items">
-                            {najtrazenijiProizvodi.map((proizvod, i) => (
-                                <div className="item" key={`najtrazeniji-${i}`}>
-                                    <img src={`/slike/${proizvod.slika}`} alt={proizvod.naziv} />
+                            {najtrazenijiproizvodi.map(({ id,slika, naziv, opis , cijena}, i) => (
+                                <div className="item" key={id}>
+                                    <img src={`/slike/${slika}`} alt={naziv} />
                                     <h3
                                         style={{
                                             textAlign: "center",
@@ -234,9 +181,9 @@ function Pocetna() {
                                             color: "darkolivegreen",
                                         }}
                                     >
-                                        {proizvod.naziv}
+                                        {naziv}
                                     </h3>
-                                    <p style={{ color: "#333", fontSize: "16px", textAlign: "center" }}>{proizvod.opis}</p>
+                                    <p style={{ color: "#333", fontSize: "16px", textAlign: "center" }}>{opis}</p>
                                     <p
                                         style={{
                                             fontWeight: "bold",
@@ -246,9 +193,9 @@ function Pocetna() {
                                             margin: "0 0 15px",
                                         }}
                                     >
-                                        {proizvod.cijena} KM
+                                        {cijena} KM
                                     </p>
-                                    <button className="button" onClick={() => handleDodajUKorpu(proizvod)}>
+                                    <button className="button" onClick={() => handleDodajUKorpu({ id, slika, naziv, opis, cijena })}>
                                         Dodaj u korpu
                                     </button>
                                 </div>
@@ -259,9 +206,9 @@ function Pocetna() {
                     <section className="featured">
                         <h2>Novi proizvodi</h2>
                         <div className="featured-items">
-                            {noviProizvodi.map((proizvod, i) => (
+                            {noviproizvodi.map(({id,slika, naziv, opis , cijena}, i) => (
                                 <div className="item" key={`novi-${i}`}>
-                                    <img src={`/slike/${proizvod.slika}`} alt={proizvod.naziv} />
+                                    <img src={`/slike/${slika}`} alt={naziv} />
                                     <h3
                                         style={{
                                             textAlign: "center",
@@ -270,9 +217,9 @@ function Pocetna() {
                                             color: "darkolivegreen",
                                         }}
                                     >
-                                        {proizvod.naziv}
+                                        {naziv}
                                     </h3>
-                                    <p style={{ color: "#333", fontSize: "16px", textAlign: "center" }}>{proizvod.opis}</p>
+                                    <p style={{ color: "#333", fontSize: "16px", textAlign: "center" }}>{opis}</p>
                                     <p
                                         style={{
                                             fontWeight: "bold",
@@ -282,15 +229,16 @@ function Pocetna() {
                                             margin: "0 0 15px",
                                         }}
                                     >
-                                        {proizvod.cijena} KM
+                                        {cijena} KM
                                     </p>
-                                    <button className="button" onClick={() => handleDodajUKorpu(proizvod)}>
+                                    <button className="button" onClick={() => handleDodajUKorpu({ id, slika, naziv, opis, cijena })}>
                                         Dodaj u korpu
                                     </button>
                                 </div>
                             ))}
                         </div>
                     </section>
+
                     <div className="features-icons">
                         <div className="feature-icon">
                             <FaTruck size={55} color="darkolivegreen" />
