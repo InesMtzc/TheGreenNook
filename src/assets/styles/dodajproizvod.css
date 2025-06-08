@@ -3,41 +3,60 @@ html, body {
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
-}
-.dodaj-proizvod-stranica h2{
-    font-family: 'Poppins', sans-serif;
-    color: #3c763d;
+    background-color: #FFFFFF;
+    color: #333;
 }
 
 .dodaj-proizvod-stranica {
     display: flex;
-    flex-direction: column; /* sve ispod forme */
+    flex-direction: column;
     align-items: center;
     padding: 40px 20px;
     box-sizing: border-box;
+    padding-bottom: 100px;
+    background-color: whitesmoke;
+}
+
+.dodaj-proizvod-stranica h2 {
+    color: #3c763d;
+    margin-bottom: 25px;
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+    border-bottom: 2px solid #3c763d;
+    padding-bottom: 0.4rem;
 }
 
 .dodaj-proizvod-forma {
-    background-color: #F3EDE0; /* svijetla bež boja forme */
-    padding: 40px;
+    background-color: #F3EDE0;
+    padding: 50px 30px;
     border-radius: 16px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
     width: 100%;
-    max-width: 400px;
+    max-width: 420px;
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    margin-top: 30px;
+    margin-bottom: 60px;
 }
+
+.dodaj-proizvod-forma:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
 
 .dodaj-proizvod-forma input,
 .dodaj-proizvod-forma textarea {
-    padding: 12px;
-    border-radius: 6px;
+    padding: 14px 16px;
+    border-radius: 8px;
     border: 2px solid #ccc;
     background-color: transparent;
     color: green;
     font-size: 1rem;
-    transition: border-color 0.3s;
+    transition: border-color 0.3s, box-shadow 0.3s;
 }
 
 .dodaj-proizvod-forma input::placeholder,
@@ -50,30 +69,34 @@ html, body {
     border-color: #528138;
     outline: none;
     color: #333;
+    box-shadow: 0 0 8px rgba(82, 129, 56, 0.2);
 }
 
 .dodaj-proizvod-forma button {
     background-color: #528138;
     color: #F3EDE0;
     border: none;
-    padding: 12px;
-    border-radius: 7px;
+    padding: 14px 20px;
+    border-radius: 8px;
     font-size: 1rem;
     cursor: pointer;
-    transition: background-color 0.3s;
-    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s;
+    font-weight: 600;
     align-self: center;
-    margin-top: 10px;
+    margin-top: 15px;
+    width: 100%;
+    max-width: 200px;
 }
 
 .dodaj-proizvod-forma button:hover {
-    background-color: palegreen;
+    background-color: #3c763d;
+    transform: translateY(-2px);
 }
 
 .lista-proizvoda {
-    margin-top: 30px;
+    margin-top: 40px;
     width: 100%;
-    max-width: 400px;
+    max-width: 420px;
     list-style: none;
     padding: 0;
 }
@@ -81,16 +104,25 @@ html, body {
 .lista-proizvoda li {
     background-color: rgba(0, 0, 0, 0.1);
     color: #333;
-    border-radius: 8px;
-    margin-bottom: 10px;
-    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 12px;
+    padding: 12px 18px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.lista-proizvoda li:hover {
+    background-color: rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
 }
 
 .lista-proizvoda li strong {
-    font-weight: bold;
+    font-weight: 600;
+}
+.dodaj-proizvod-stranica h3{
+    color: black;
 }
 
 .btn-obrisi {
@@ -99,11 +131,12 @@ html, body {
     border: none;
     border-radius: 6px;
     cursor: pointer;
-    padding: 6px 12px;
-    font-weight: bold;
-    transition: background-color 0.3s;
+    padding: 8px 14px;
+    font-weight: 600;
+    transition: background-color 0.3s, transform 0.2s;
 }
 
 .btn-obrisi:hover {
     background-color: #ff0000;
+    transform: scale(1.05);
 }
