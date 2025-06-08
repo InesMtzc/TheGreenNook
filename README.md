@@ -75,9 +75,6 @@ Dodatno: Google Maps iframe za prikaz lokacije na kontakt stranici
 Početna stranica: pregledna landing stranica s proizvodima i menijem 
 Navigacija: meni s linkovima na "O nama","Proizvodi", "Prijava", "Kontakt", i search bar, favoriti i korpa
 Autentikacija: forme za registraciju i prijavu; korisnici imaju uloge Admin i Guest
-Uloge korisnika:
-Admin: može dodavati i brisati proizvode, kao i vdijeti poruke poslane iz kontakt forme
-Guest: može gledati proizvode i koristiti kontakt formu
 Forme:Registracija, Prijava, Kontakt (s validacijom unosa)
 Baza podataka: podaci se pohranjuju na lokalni mock server (json-server)
 Google Maps: ugrađen na kontakt stranici kroz iframe za prikaz lokacije
@@ -86,6 +83,18 @@ Responsivan dizajn: aplikacija prilagođena različitim veličinama ekrana, uklj
 Paleta boja i fontovi
 Glavne boje: #61884B(zelena, označava mir i prirodu) i #F3EDE0(bež, koristi se kao svijetlija nijansa za kontrast zelenoj)
 
-Ostale boje:
+Ostale boje:#F5F0E6,#fff,#abb599,3c763d,#353c2a,crimson,#ff0000,green,lightgray, lightgreen, lightpurple, grey, palegreen, limegreen.
+Fontovi: Poppins, Lexend Mega, Sagoe UI, Playfair Display SC, Passions Conflict, Sacramento.
 
+
+5.Uloge korisnika
+
+Admin: može dodavati i brisati proizvode, kao i vidijeti poruke poslane iz kontakt forme
+Guest: može gledati proizvode i koristiti kontakt formu
+Oboje se mogu prijaviti, međutim za registracijunovog admina potrebno je odmah rucno ukucati admina u bazu, jer se prilikom registracije, to jest kreiranja novog profila ne moze dodati admin, nego samo gosti.
+
+6.Upute za pokretanje projekta
+
+Ukoliko nije instaliran treba se instalirati Node.js.Nakon toga u terminalu pokrenuti npm install.
+Ukoliko se projekat otvara preko Webstorma prvo je potrebno podesiti localhost:3001, iz razloga što se stranica pokreće na localhost:3001, a baza se nalazi na localhost:3000. Nakon toga potrebno je u terminalu inicijalizirati json-server na sljedeći način:json-server --watch db.json --port 3000.
 
