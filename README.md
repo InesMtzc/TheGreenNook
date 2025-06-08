@@ -89,12 +89,23 @@ Fontovi: Poppins, Lexend Mega, Sagoe UI, Playfair Display SC, Passions Conflict,
 
 5.Uloge korisnika
 
-Admin: može dodavati i brisati proizvode, kao i vidijeti poruke poslane iz kontakt forme
+Admin: može dodavati i brisati proizvode, kao i vidjeti poruke poslane iz kontakt forme
 Guest: može gledati proizvode i koristiti kontakt formu
 Oboje se mogu prijaviti, međutim za registracijunovog admina potrebno je odmah rucno ukucati admina u bazu, jer se prilikom registracije, to jest kreiranja novog profila ne moze dodati admin, nego samo gosti.
 
-6.Upute za pokretanje projekta
+6. Kratki opis doprinosa svakog člana tima
+
+Aida Terzić: prebacivanje html fajlova u js, kreiranje i uređivanje header i footer fajlova, dodavanje animacija na stranicu, uređivanje stranice proizvodi, dodavanje proizvoda i detalja za svaki, implementacija funkcionalnosti na tu stranicu, stavljanje proizvoda u bazu, prepravljanje stranica tako da se svi proizvodi koji su na stranici fetchuju iz baze uključujući početnu,proizvode i detaljnu stranicu proizvoda
+
+Selma Škulj: Razvoj kontakt forme s validacijom i integracija Google Maps
+
+Ines Murtezanović: kreiranje i uredjivanje login i registracijske forme s validacijom, kreiranje uloga i različitosti u njima,kreiranje poruka u slucaju prijave bez kreiranog profila i poruke pri pregistraciji ukoliko je email zauzet, kreiranje welcome,dashboard,poruke i dodaj proizvod stranice kao i njihovo uredjivanje, povezivanje poruke stranice sa bazom da bi se mogle pojaviti poruke poslane preko kontakt forme, uređivanje stranice dodaj proizvode kako bi se mogli dodati proizvodi u bazu i prikazati na stranici kao i ostali, dodana funkcionalnost za dodavanje i upload slika s laptopa, te dodatak funkcionalnosti brisanje gdje se proizvodi brišu sa stranice i iz baze.
+
+
+
+7.Upute za pokretanje projekta
 
 Ukoliko nije instaliran treba se instalirati Node.js.Nakon toga u terminalu pokrenuti npm install.
 Ukoliko se projekat otvara preko Webstorma prvo je potrebno podesiti localhost:3001, iz razloga što se stranica pokreće na localhost:3001, a baza se nalazi na localhost:3000. Nakon toga potrebno je u terminalu inicijalizirati json-server na sljedeći način:json-server --watch db.json --port 3000.
+
 
