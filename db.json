@@ -29,56 +29,13 @@
       "role": "guest"
     },
     {
-      "id": "130b",
-      "ime": "MAja",
-      "email": "maja@size.ba",
-      "password": "1111",
-      "role": "gost"
-    },
-    {
-      "id": "392c",
-      "ime": "Ines",
-      "email": "hahah@size.ba",
-      "password": "11111",
-      "role": "gost"
-    },
-    {
-      "id": "1559",
-      "ime": "",
-      "email": "",
-      "password": "",
-      "role": "gost"
-    },
-    {
-      "id": "0c7d",
-      "ime": "",
-      "email": "",
-      "password": "",
-      "role": "gost"
-    },
-    {
-      "id": "0d37",
-      "ime": "",
-      "email": "",
-      "password": "",
-      "role": "gost"
-    },
-    {
-      "id": "c1a4",
-      "ime": "Maja",
-      "email": "maja@size.ba",
-      "password": "1111",
-      "role": "gost"
-    },
-    {
-      "id": "62ff",
-      "ime": "Maja",
-      "email": "maja@size.ba",
-      "password": "1234",
+      "id": "5ae5",
+      "ime": "mile",
+      "email": "mile@size.ba",
+      "password": "1254",
       "role": "gost"
     }
   ],
-
   "messages": [
     {
       "id": "098c",
@@ -86,38 +43,49 @@
       "email": "selma.skulj.24@size.ba",
       "poruka": "Test2",
       "datum": "03. 06. 2025. 21:30:26"
+    },
+    {
+      "id": "c45a",
+      "ime": "Maja",
+      "email": "maja@size.ba",
+      "poruka": "proba 123",
+      "datum": "6/7/2025, 2:14:14 PM"
+    },
+    {
+      "id": "74fe",
+      "ime": "Selma",
+      "email": "selma.skulj.24@size.ba",
+      "poruka": "poruka 123",
+      "datum": "6/7/2025, 2:15:06 PM"
+    },
+    {
+      "id": "655c",
+      "ime": "sandra",
+      "email": "sandra@size.ba",
+      "poruka": "proba proba",
+      "datum": "6/8/2025, 4:53:09 PM"
     }
   ],
   "tim": [
     {
-      "id": 1,
+      "id": "1",
       "ime": "Ines",
       "slika": "/slike/Ines.png",
       "opis": "Stručnjakinja za aromaterapiju i biljnu njegu. Donosi znanje iz botanike i ljubav prema prirodi."
     },
     {
-      "id": 2,
+      "id": "2",
       "ime": "Aida",
       "slika": "/slike/Aida1.png",
       "opis": "Organizatorka tima i kreativna snaga marketinga. Uvijek donosi novu energiju i ideje."
     },
     {
-      "id": 3,
+      "id": "3",
       "ime": "Selma",
       "slika": "/slike/Selma.png",
       "opis": "Inicijator projekta i stručnjakinja za prirodnu kozmetiku. Brine o kvaliteti svakog proizvoda."
     }
   ],
-  "poruke": [
-    {
-      "id": "9c00",
-      "ime": "Selma",
-      "email": "selma.skulj.24@size.ba",
-      "poruka": "Terstiranje kontakta",
-      "datum": "2025-06-03T19:15:19.830Z"
-    }
-  ],
-
   "proizvodi": [
     {
       "id": "1",
@@ -126,13 +94,19 @@
       "cijena": 3.95,
       "kategorija": "cajevi",
       "slika": "caj1.png",
-      "slike": ["caj1.png","caj1a.webp"]
+      "slike": [
+        "caj1.png",
+        "caj1a.webp"
+      ]
     },
     {
       "id": "2",
       "naziv": "Čaj od metvice i nane",
       "slika": "caj2.png",
-      "slike": ["caj2.png","caj2a.webp"],
+      "slike": [
+        "caj2.png",
+        "caj2a.webp"
+      ],
       "kategorija": "cajevi",
       "opis": "Osvježavajući biljni napitak koji smiruje probavni sistem i opušta tijelo. Nana i metvica poznate su po svojim umirujućim i rashlađujućim svojstvima – idealne su kod osjećaja nadutosti, mučnine i stresa. Blagi, osvježavajući ukus savršen je nakon obroka ili u trenucima relaksacije.",
       "cijena": 4.95
@@ -141,7 +115,10 @@
       "id": "3",
       "naziv": "Osvježavajući čaj limuna i đumbira",
       "slika": "caj3.png",
-      "slike": ["caj3.png","caj3a.webp"],
+      "slike": [
+        "caj3.png",
+        "caj3a.webp"
+      ],
       "kategorija": "cajevi",
       "opis": "Kombinacija limuna bogatog antioksidansima i đumbira poznatog po svom protuupalnom djelovanju čini ovaj čaj snažnim saveznikom u jačanju imuniteta. Pomaže u detoksikaciji organizma, ublažava mučninu i podstiče probavu. Pogodan za jutarnje buđenje i podizanje energije tokom dana.",
       "cijena": 3.95
@@ -150,43 +127,58 @@
       "id": "4",
       "naziv": "Umirujući čaj lavande i valerijane",
       "slika": "caj4.png",
-      "slike": ["caj4.png","caj4a.webp"],
+      "slike": [
+        "caj4.png",
+        "caj4a.webp"
+      ],
       "kategorija": "cajevi",
-      "opis":  "Formulisan da pomogne kod nesanice, stresa i napetosti, ovaj čaj sadrži lavandu koja opušta tijelo i um, te valerijanu koja blagotvorno djeluje na kvalitet sna. Blagi cvjetni miris i opuštajući efekat čine ga savršenim za večernje sate ili trenutke smirenja.",
+      "opis": "Formulisan da pomogne kod nesanice, stresa i napetosti, ovaj čaj sadrži lavandu koja opušta tijelo i um, te valerijanu koja blagotvorno djeluje na kvalitet sna. Blagi cvjetni miris i opuštajući efekat čine ga savršenim za večernje sate ili trenutke smirenja.",
       "cijena": "5.95"
     },
     {
       "id": "5",
       "naziv": "Prirodni čaj od kamilice",
       "slika": "caj5.png",
-      "slike": ["caj5.png","caj5a.webp"],
+      "slike": [
+        "caj5.png",
+        "caj5a.webp"
+      ],
       "kategorija": "cajevi",
-      "opis": "Kamilica je poznata po svojim umirujućim i protuupalnim svojstvima. Pomaže kod nesanice, probavnih problema i grčeva. Njen blag i prijatan ukus čini je pogodnom i za djecu i za odrasle, a može se konzumirati i više puta dnevno." ,
+      "opis": "Kamilica je poznata po svojim umirujućim i protuupalnim svojstvima. Pomaže kod nesanice, probavnih problema i grčeva. Njen blag i prijatan ukus čini je pogodnom i za djecu i za odrasle, a može se konzumirati i više puta dnevno.",
       "cijena": "4.95"
     },
     {
       "id": "6",
       "naziv": "Čisti zeleni čaj",
       "slika": "caj6.png",
-      "slike": ["caj6.png","caj6a.webp"],
+      "slike": [
+        "caj6.png",
+        "caj6a.webp"
+      ],
       "kategorija": "cajevi",
-      "opis": "Bogat antioksidansima, zeleni čaj podržava detoksikaciju, ubrzava metabolizam i poboljšava koncentraciju. Njegov svjež, travnat ukus oživljava tijelo i um. Preporučuje se ujutro ili popodne kao zdravija alternativa kafi." ,
+      "opis": "Bogat antioksidansima, zeleni čaj podržava detoksikaciju, ubrzava metabolizam i poboljšava koncentraciju. Njegov svjež, travnat ukus oživljava tijelo i um. Preporučuje se ujutro ili popodne kao zdravija alternativa kafi.",
       "cijena": "4.95"
     },
     {
       "id": "7",
       "naziv": "Začinski čaj kurkume i cimeta",
       "slika": "caj7.png",
-      "slike": ["caj7.png","caj7a.webp"],
+      "slike": [
+        "caj7.png",
+        "caj7a.webp"
+      ],
       "kategorija": "cajevi",
-      "opis": "Topao i aromatičan napitak koji sadrži moćnu kombinaciju kurkume sa protuupalnim svojstvima i cimeta koji pomaže u regulaciji šećera u krvi. Odličan za jačanje imuniteta i poboljšanje cirkulacije. Idealan za hladnije dane ili oporavak organizma." ,
+      "opis": "Topao i aromatičan napitak koji sadrži moćnu kombinaciju kurkume sa protuupalnim svojstvima i cimeta koji pomaže u regulaciji šećera u krvi. Odličan za jačanje imuniteta i poboljšanje cirkulacije. Idealan za hladnije dane ili oporavak organizma.",
       "cijena": "3.95"
     },
     {
       "id": "8",
       "naziv": "Zeleni čaj s jasminom",
       "slika": "caj8.png",
-      "slike": ["caj8.png","caj8a.webp"],
+      "slike": [
+        "caj8.png",
+        "caj8a.webp"
+      ],
       "kategorija": "cajevi",
       "opis": "Ovaj čaj spaja benefite zelenog čaja i nježni, cvjetni miris jasmina. Deluje umirujuće na um i tijelo, smanjuje stres i doprinosi osjećaju balansa. Savršen je za pauzu tokom dana, meditaciju ili čitanje.",
       "cijena": "7.95"
@@ -252,7 +244,10 @@
       "naziv": "Sapun od lavande i jojobe",
       "cijena": "3.95",
       "slika": "sapun1.png",
-      "slike": ["sapun1.png","sapun1a.png"],
+      "slike": [
+        "sapun1.png",
+        "sapun1a.png"
+      ],
       "kategorija": "sapuni",
       "opis": "Ovaj prirodni sapun kombinuje umirujuća svojstva lavande i hranjivu moć ulja jojobe. Lavanda djeluje antiseptički, pomaže u opuštanju i smanjuje stres, dok jojobino ulje dubinski hidrira i balansira prirodna ulja kože. Savršen je za osjetljivu, suhu i normalnu kožu, čineći je mekom, njegovanom i osvježenom. Blagi, cvjetni miris lavande pruža osjećaj smirenosti nakon svakog korištenja. Težina: 75g"
     },
@@ -261,7 +256,10 @@
       "naziv": "Sapun od kajsije, divljeg meda i timijana",
       "cijena": "4.95",
       "slika": "sapun2.png",
-      "slike": ["sapun2.png","sapun2a.jpeg"],
+      "slike": [
+        "sapun2.png",
+        "sapun2a.jpeg"
+      ],
       "kategorija": "sapuni",
       "opis": "Ovaj nježni sapun kombinuje prirodnu slatkoću kajsije, njegujuća svojstva divljeg meda i osvježavajući biljni miris timijana. Pomaže u hidrataciji, umiruje kožu i ostavlja je glatkom i mirisnom nakon svakog pranja. Težina: 75g"
     },
@@ -270,7 +268,10 @@
       "naziv": "Sapun s lavandom",
       "cijena": "4.95",
       "slika": "sapun3.png",
-      "slike": ["sapun3.png","sapun3a.jpeg"],
+      "slike": [
+        "sapun3.png",
+        "sapun3a.jpeg"
+      ],
       "kategorija": "sapuni",
       "opis": "Prirodni sapun sa eteričnim uljem lavande pruža umirujuće i opuštajuće dejstvo na kožu i um. Blaga, ali bogata pjena nježno čisti kožu, dok lavanda djeluje antibakterijski i pomaže u smirivanju iritacija. Idealan je za svakodnevnu upotrebu, posebno prije spavanja. Težina: 75g"
     },
@@ -279,7 +280,10 @@
       "naziv": "Sapun sa nanom, grejpfrutom i đumbirom",
       "cijena": "3.95",
       "slika": "sapun4.png",
-      "slike": ["sapun4.png","sapun4a.jpeg"],
+      "slike": [
+        "sapun4.png",
+        "sapun4a.jpeg"
+      ],
       "kategorija": "sapuni",
       "opis": "Osvježavajući sapun koji kombinuje hladni i mentolasti miris nane, citrusnu notu grejpfruta i toplinu đumbira. Ova kombinacija energizira kožu, dubinski je čisti i pruža ugodan osećaj svežine i vitalnosti nakon svakog pranja. Težina: 75g"
     },
@@ -288,7 +292,10 @@
       "naziv": "Sapun sa morskom algom, limetom i lovorom",
       "cijena": "4.95",
       "slika": "sapun5.png",
-      "slike": ["sapun5.png","sapun5a.jpeg"],
+      "slike": [
+        "sapun5.png",
+        "sapun5a.jpeg"
+      ],
       "kategorija": "sapuni",
       "opis": "Ovaj sapun sadrži hranjivu morsku algu, osvežavajuću limetu i aromatični lovor. Idealna kombinacija koja dubinski čisti, hrani i tonira kožu, ostavljajući je mekom, osveženom i blago mirisnom. Savršen za svakodnevnu upotrebu. Težina: 75g"
     },
@@ -297,7 +304,10 @@
       "naziv": "Baštenski sapun",
       "cijena": "5.95",
       "slika": "sapun6.png",
-      "slike": ["sapun6.png","sapun6a.jpeg"],
+      "slike": [
+        "sapun6.png",
+        "sapun6a.jpeg"
+      ],
       "kategorija": "sapuni",
       "opis": "Ovaj sapun je posebno formulisan za ruke baštovana. Efikasno uklanja prljavštinu, zemlju i ostatke biljaka, dok istovremeno neguje kožu i sprečava njeno isušivanje. Sadrži prirodne sastojke koji umiruju i štite ruke nakon napornog rada u bašti. Težina: 75g"
     },
@@ -306,7 +316,10 @@
       "naziv": "Sapun od citrusa i morske soli",
       "cijena": "4.95",
       "slika": "sapun7.png",
-      "slike": ["sapun7.png","sapun7a.jpeg"],
+      "slike": [
+        "sapun7.png",
+        "sapun7a.jpeg"
+      ],
       "kategorija": "sapuni",
       "opis": "Ovaj osvežavajući sapun kombinuje energiju citrusnih aroma sa blagim piling efektom morske soli. Pomaže u uklanjanju mrtvih ćelija kože, ostavljajući je glatkom i osveženom. Idealno za toniranje kože i podizanje raspoloženja. Težina: 75g"
     },
@@ -315,7 +328,10 @@
       "naziv": "Sapun od avokada i čajevca",
       "cijena": "3.95",
       "slika": "sapun8.png",
-      "slike": ["sapun8.png","sapun8a.png"],
+      "slike": [
+        "sapun8.png",
+        "sapun8a.png"
+      ],
       "kategorija": "sapuni",
       "opis": "Ovaj hranljivi sapun spaja bogatstvo avokada, poznatog po svojoj hidratantnoj moći, i antiseptička svojstva ulja čajevca. Idealno je za čišćenje i njegu kože, pomažući u smirivanju iritacija i održavanju prirodne ravnoteže kože. Težina: 75g"
     },
@@ -324,7 +340,10 @@
       "naziv": "Sapun od vanile, badema i kakao maslaca",
       "cijena": "6.95",
       "slika": "sapun9.png",
-      "slike": ["sapun9.png","sapun9a.jpeg"],
+      "slike": [
+        "sapun9.png",
+        "sapun9a.jpeg"
+      ],
       "kategorija": "sapuni",
       "opis": "Ovaj bogati sapun kombinuje slatke note vanile i hranjivih badema sa duboko hidratantnim kakao maslacem. Savršen je za njegujuće i blago čišćenje kože, ostavljajući je mekanom, glatkom i ugodno mirisnom. Težina: 75g"
     },
@@ -333,7 +352,10 @@
       "naziv": "Organski sapun od kamilice",
       "cijena": "3.95",
       "slika": "sapun10.png",
-      "slike": ["sapun10.png","sapun10a.jpeg"],
+      "slike": [
+        "sapun10.png",
+        "sapun10a.jpeg"
+      ],
       "kategorija": "sapuni",
       "opis": "Nježan sapun napravljen od organske kamilice, poznate po svojim umirujućim i protivupalnim svojstvima. Idealno za osjetljivu i iritiranu kožu, ovaj sapun pomaže u smirivanju crvenila i pruža blagu, prirodnu njegu. Težina: 75g"
     },
@@ -342,7 +364,11 @@
       "naziv": "Ulje jojobe",
       "cijena": "11.95",
       "slika": "ulje1a.png",
-      "slike": ["ulje1.png","ulje1a.png","ulje1b.png"],
+      "slike": [
+        "ulje1.png",
+        "ulje1a.png",
+        "ulje1b.png"
+      ],
       "kategorija": "ulja",
       "opis": "Biljno ulje jojobe je savršeno za sve tipove kože i široko se koristi u tretmanima lica, jer je pogodno i za mešovitu ili masnu kožu. Ne zapušava pore (nekomedogeno je). Njegov sastav je sličan prirodnom sebumu kože, pa je njegova kompatibilnost s kožom i kosom izuzetna. Pomaže u jačanju hidrolipidnog sloja kože i predstavlja odličan hidratantni agens. Hrani kožu i prodire duboko, a da pri tom ne ostavlja mastan trag. Izdvaja se po svojim anti-age svojstvima, sposobnosti regulacije sebuma i odličan je saveznik u borbi protiv akni."
     },
@@ -351,7 +377,11 @@
       "naziv": "Ulje nevena",
       "cijena": "16.95",
       "slika": "ulje2.png",
-      "slike": ["ulje2.png","ulje2a.png","ulje2b.png"],
+      "slike": [
+        "ulje2.png",
+        "ulje2a.png",
+        "ulje2b.png"
+      ],
       "kategorija": "ulja",
       "opis": "Ulje nevena je izuzetno blago i umirujuće ulje, pogodno za sve tipove kože, uključujući i veoma osetljivu kožu, kožu beba i iritiranu kožu. Poznato je po svojim antiinflamatornim, regenerativnim i antiseptičkim svojstvima. Pomaže u smirivanju crvenila, iritacija, opekotina od sunca, ekcema i manjih povreda kože. Intenzivno neguje, hidrira i podstiče obnavljanje kože. Zahvaljujući svojim prirodnim aktivnim sastojcima, odličan je izbor za svakodnevnu negu, kao i za upotrebu nakon izlaganja suncu ili kod ispucale i suve kože."
     },
@@ -360,7 +390,11 @@
       "naziv": "Organsko ulje ruzmarina",
       "cijena": "13.95",
       "slika": "ulje3.png",
-      "slike": ["ulje3.png","ulje3a.png","ulje3b.png"],
+      "slike": [
+        "ulje3.png",
+        "ulje3a.png",
+        "ulje3b.png"
+      ],
       "kategorija": "ulja",
       "opis": "Organsko etarsko ulje ruzmarina poznato je po svojim stimulišućim, osvežavajućim i tonirajućim svojstvima. Često se koristi u aromaterapiji za poboljšanje koncentracije, pamćenja i mentalne bistrine. Ima antibakterijska i protivupalna svojstva, pa je odličan za negu problematične kože i vlasišta. Podstiče cirkulaciju, jača kosu i sprečava opadanje, pa se često koristi u tretmanima za rast kose. Može se koristiti razblaženo u baznom ulju za masažu, kupke ili kao dodatak prirodnoj kozmetici."
     },
@@ -369,7 +403,11 @@
       "naziv": "Ulje eukaliptusa",
       "cijena": "11.95",
       "slika": "ulje4.png",
-      "slike": ["ulje4.png","ulje4a.png","ulje4b.png"],
+      "slike": [
+        "ulje4.png",
+        "ulje4a.png",
+        "ulje4b.png"
+      ],
       "kategorija": "ulja",
       "opis": "Ulje eukaliptusa ima jaka antiseptička, antibakterijska i antivirusna svojstva, zbog čega je veoma cenjeno u prirodnoj medicini i aromaterapiji. Najčešće se koristi za olakšavanje respiratornih problema poput prehlade, kašlja, bronhitisa i zapušenog nosa – u vidu inhalacija ili balzama. Osvežava, rashlađuje i pomaže u oslobađanju disajnih puteva. Deluje i protivupalno, pa se koristi i kod bolova u mišićima i zglobovima, često u masažama. Može doprineti mentalnoj jasnoći i povećati koncentraciju, zahvaljujući svom prodornom, čistom mirisu."
     },
@@ -378,7 +416,11 @@
       "naziv": "Ulje mandarine",
       "cijena": "15.95",
       "slika": "ulje5.png",
-      "slike": ["ulje5.png","ulje5a.png","ulje5b.png"],
+      "slike": [
+        "ulje5.png",
+        "ulje5a.png",
+        "ulje5b.png"
+      ],
       "kategorija": "ulja",
       "opis": "Ulje mandarine deluje umirujuće, opuštajuće i osvežavajuće, pa je odlično za ublažavanje stresa, nervoze i nesanice. Posebno je pogodno za decu i osobe sa osetljivom kožom, jer je jedno od najblažih etarskih ulja. Podstiče regeneraciju kože, ujednačava ten i koristi se u borbi protiv strija i ožiljaka. Ima blago antiseptičko i detoksikujuće dejstvo, pa se često koristi i u masažnim uljima za podsticanje cirkulacije i limfne drenaže. Savršeno se uklapa u večernje aromaterapijske rituale zbog svog prijatnog i toplog mirisa."
     },
@@ -387,7 +429,11 @@
       "naziv": "Ulje lavande",
       "cijena": "17.95",
       "slika": "ulje6.png",
-      "slike": ["ulje6.png","ulje6a.png","ulje6b.png"],
+      "slike": [
+        "ulje6.png",
+        "ulje6a.png",
+        "ulje6b.png"
+      ],
       "kategorija": "ulja",
       "opis": "Etarsko ulje lavande deluje opuštajuće na um i telo, pomaže kod stresa, nesanice, anksioznosti i glavobolje. Blagotvorno deluje na kožu – ubrzava regeneraciju, ublažava iritacije, opekotine, ubode insekata, akne i manje posekotine. Zahvaljujući svom antibakterijskom i protivupalnom dejstvu, koristi se u prirodnoj kozmetici, nezi problematične kože i kod osetljivog vlasišta. Odlično je i u masažama, kupkama i aromaterapiji – stvara osećaj smirenosti i emocionalne ravnoteže. Može se koristiti direktno na koži u malim količinama, za razliku od većine etarskih ulja."
     },
@@ -396,7 +442,11 @@
       "naziv": "Ulje za opuštanje i protiv stresa",
       "cijena": "13.95",
       "slika": "ulje7.png",
-      "slike": ["ulje7.png","ulje7a.png","ulje7b.png"],
+      "slike": [
+        "ulje7.png",
+        "ulje7a.png",
+        "ulje7b.png"
+      ],
       "kategorija": "ulja",
       "opis": "Hranljivo i dermoprotektivno ulje za telo sa umirujućim svojstvima. Idealno kao anti-stres preparat jer smiruje i pomaže pri uspavljivanju. Savršeno za hidrataciju kože pre spavanja ili za dodavanje nekoliko kapi u kupku. Sadrži organska ulja nevena, susama i lanenog semena — izvrsne sastojke za zaštitu, regeneraciju, protivupalno dejstvo i umirenje kože, posebno pogodne za osetljivu ili delikatnu kožu, kao i za kožu sa dermatitisom, svrabom, ekcemom ili atopijskim pogoršanjima. Zaljubićete se u njen nežan i obavijajući miris, spoj lavande, narandže i bergamota, koji pomaže u stvaranju osećaja opuštenosti i mira."
     }
@@ -427,7 +477,7 @@
       "opis": "Hidratantne kreme sa prirodnim ekstraktima za negu kože."
     }
   ],
-  "najtrazenijiproizvodi" : [
+  "najtrazenijiproizvodi": [
     {
       "id": "43",
       "slika": "ulje3.png",
@@ -457,7 +507,7 @@
       "cijena": "17.95 "
     }
   ],
-  "noviproizvodi" : [
+  "noviproizvodi": [
     {
       "id": "46",
       "slika": "ulje6.png",

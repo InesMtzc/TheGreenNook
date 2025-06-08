@@ -133,7 +133,7 @@ function Kontakt() {
             <div
                 className="kontakt-wrapper"
                 style={{
-                    backgroundImage: "url('/slike/pozadina1.png')",
+                    backgroundImage: "url('/slike/kontakt.jpg')",
                     backgroundSize: "cover",
                     backgroundRepeat: "no-repeat",
                     backgroundPosition: "center"

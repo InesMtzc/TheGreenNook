@@ -5,6 +5,8 @@ import { FaInstagram, FaFacebookF, FaTwitter } from "react-icons/fa";
 import Header from '../components/header';
 import Footer from '../components/footer';
 import React, { useState, useEffect} from 'react';
+import { useLocation } from "react-router-dom";
+
 
 function Pocetna() {
 
@@ -43,6 +45,20 @@ function Pocetna() {
     ];
 
     const navigate = useNavigate();
+    const location = useLocation();
+
+    useEffect(() => {
+        if (location.state) {
+            if (location.state.loginSuccess) {
+                setPoruka(`Dobrodošli nazad, ${location.state.korisnik.username}!`);
+            } else if (location.state.registrationSuccess) {
+                setPoruka("Registracija uspješna! Možete se prijaviti.");
+            }
+            // Po želji, resetuj state da se ne bi stalno prikazivalo:
+            window.history.replaceState({}, document.title);
+        }
+    }, [location.state]);
+
     const [poruka, setPoruka] = useState("");
 
     const handleDropdownClick = (path, sectionId) => {

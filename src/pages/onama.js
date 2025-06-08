@@ -18,7 +18,7 @@ function Onama() {
 
 
     useEffect(() => {
-        fetch('/tim')
+        fetch('http://localhost:3000/tim')
             .then((res) => res.json())
             .then((data) => setTim(data))
             .catch((err) => console.error("Greška pri dohvaćanju tima:", err));

@@ -1,35 +1,37 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import '../assets/styles/registracijastil.css';
-import {Link, useNavigate} from "react-router-dom";
 
-function RegisterForm({ onRegister }) {
+function RegisterForma({ onRegister }) {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [ime, setIme] = useState('');
-    const navigate = useNavigate();
 
+    // RegisterForma.js
     const handleSubmit = async (e) => {
         e.preventDefault();
-        const noviKorisnik = {
-            ime,
-            email,
-            password,
-            role: "gost"
-        };
         try {
-            const res = await fetch('http://localhost:5000/users', {
+            // Provjeri da li već postoji korisnik s tim emailom
+            const provjera = await fetch(`http://localhost:3000/users?email=${email}`);
+            const postojeci = await provjera.json();
+            if (postojeci.length > 0) {
+                alert('Već postoji korisnik s ovim emailom!');
+                return;
+            }
+
+            // Upis novog korisnika
+            const noviKorisnik = { ime, email, password, role: "gost" };
+            const res = await fetch('http://localhost:3000/users', {
                 method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(noviKorisnik)
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(noviKorisnik),
             });
             if (res.ok) {
                 setIme('');
                 setEmail('');
                 setPassword('');
-                onRegister(noviKorisnik);
-
+                alert('Uspješno ste registrovani. Možete se prijaviti.');
+                if (onRegister) onRegister(noviKorisnik);
             } else {
                 console.log('Greška prilikom registracije');
             }
@@ -38,45 +40,48 @@ function RegisterForm({ onRegister }) {
         }
     };
 
+
     return (
-        <div className="register-wrapper" style={{
-            backgroundImage: "url('/slike/pozadina1.png')",
+        <div className="login-wrapper" style={{
+            backgroundImage: "url('/slike/kontakt.jpg')",
             backgroundSize: "cover",
             backgroundRepeat: "no-repeat",
             backgroundPosition: "center"
-        }}> {/* koristi istu klasu kao login da zadržiš stil */}
+        }}>
             <form onSubmit={handleSubmit}>
-                <h2>Registracija</h2>
+                <h2>SIGN UP</h2>
                 <input
                     type='text'
-                    placeholder="Ime"
+                    placeholder="Vaše ime"
                     value={ime}
                     onChange={(e) => setIme(e.target.value)}
                     required
                 />
                 <input
                     type='email'
-                    placeholder="Email"
+                    placeholder="Vaš email"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     required
                 />
                 <input
                     type='password'
-                    placeholder="Lozinka"
+                    placeholder="Vaša lozinka"
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
                     required
                 />
                 <button type="submit" style={{ color: 'white' }}>Registruj se</button>
-                <p style={{ marginTop: '10px' }}>Imate račun?
+
+                <p style={{ color: 'white', marginTop: '10px' }}>
+                    Imate račun?{' '}
                     <Link to="/login" style={{ color: 'white', textDecoration: 'underline' }}>
                         Uloguj se
-                    </Link></p>
+                    </Link>
+                </p>
             </form>
         </div>
     );
 }
 
-export default RegisterForm;
-
+export default RegisterForma;

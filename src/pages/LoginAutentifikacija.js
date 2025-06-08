@@ -1,79 +1,50 @@
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import LoginForma from "../components/LoginForma";
 import RegisterForma from "../components/RegisterForma";
-import '../assets/styles/autentifikacija.css';
 
 function Login() {
-        const [prikaziRegistraciju, setPrikaziRegistaciju] = useState(false);
-        const [ulogovaniKorisnik, setUlogovaniKorisnik] = useState(null);
-        useEffect(() => {
-            const spremljeniKorisnik = localStorage.getItem('ulogovaniKorisnik');
-            if (spremljeniKorisnik) {
-                setUlogovaniKorisnik(JSON.parse(spremljeniKorisnik));
-            }
-        }, []);
-        const navigate = useNavigate();
+    const [prikaziRegistraciju, setPrikaziRegistaciju] = useState(false);
+    const [ulogovaniKorisnik, setUlogovaniKorisnik] = useState(null);
+    const navigate = useNavigate();
 
-
-const handleLogin = (korisnik) => {
-    console.log('Pokusaj prijave:', korisnik);
-    setUlogovaniKorisnik(korisnik);
-    localStorage.setItem('ulogovaniKorisnik', JSON.stringify(korisnik));
-
-    // Sačekaj 3 sekunde, pa idi na home (ili admin dashboard)
-    setTimeout(() => {
-        if (korisnik.role === 'admin') {
-            navigate('/admin-dashboard');  // ako napravimo admin stranicu
-        } else {
-            navigate('/home');  // gost ide na home
+    useEffect(() => {
+        const spremljeniKorisnik = localStorage.getItem('ulogovaniKorisnik');
+        if (spremljeniKorisnik) {
+            const korisnik = JSON.parse(spremljeniKorisnik);
+            setUlogovaniKorisnik(korisnik);
+            // Ako je korisnik već prijavljen, direktno idi na welcome stranicu
+            navigate('/welcome');
         }
-    }, 3000);
-};
+    }, [navigate]);
 
-
+    const handleLogin = (korisnik) => {
+        console.log('Pokusaj prijave:', korisnik);
+        setUlogovaniKorisnik(korisnik);
+        navigate('/welcome');
+    };
 
     const handleRegister = (korisnik) => {
-        // 1. Sačuvaj korisnika u localStorage i state
-        localStorage.setItem('ulogovaniKorisnik', JSON.stringify(korisnik));
-        setUlogovaniKorisnik(korisnik);
-
-        // 2. Sačekaj 3 sekunde pa idi na home
-        setTimeout(() => {
-            navigate('/home');
-        }, 3000); // 3000ms = 3 sekunde
-    };
-
-
-
-
-
-
-    const handleLogout = () => {
-        localStorage.removeItem('ulogovaniKorisnik'); // ukloni korisnika iz localStorage
-        setUlogovaniKorisnik(null); // resetuj stanje
-        navigate('/login'); // preusmjeri nazad na login stranicu
-    };
+        console.log('Pokusaj registracije:', korisnik);
+    }
 
     return (
-        <div style={{padding: '20px'}}>
+        <div style={{ padding: '20px' }}>
             {ulogovaniKorisnik ? (
                 <div>
-                    <h3>Dobro došla, {ulogovaniKorisnik.ime}!</h3>
+                    <h2>Dobro došao, {ulogovaniKorisnik.ime}!</h2>
                     <p>Uspješno ste prijavljeni kao {ulogovaniKorisnik.role}</p>
-                    <button onClick={handleLogout}>Odjavi se</button>  {/* dugme za odjavu */}
                 </div>
             ) : (
                 <>
-
+                    <div style={{ marginBottom: '20px' }}>
+                        <button onClick={() => setPrikaziRegistaciju(false)}>Prijava</button>
+                        <button onClick={() => setPrikaziRegistaciju(true)}>Registracija</button>
+                    </div>
                     {prikaziRegistraciju ? (
-                        <div>
-                            <h3>Dobro došla, {ulogovaniKorisnik.ime}!</h3>
-                            <p>Uspješno ste prijavljeni kao {ulogovaniKorisnik.role}</p>
-                            <button onClick={handleLogout}>Odjavi se</button>  {/* dugme za odjavu */}
-                        </div>
+                        <RegisterForma onRegister={handleRegister} />
                     ) : (
-                <LoginForma onLogin={handleLogin}/>
+                        <LoginForma onLogin={handleLogin} />
                     )}
                 </>
             )}

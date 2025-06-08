@@ -8,9 +8,14 @@ import ProizvodiDetalji from './pages/ProizvodiDetalji';
 import Kontakt from "./pages/kontakt";
 import Header from "./components/header";
 import Footer from './components/footer';
+import Login from "./pages/LoginAutentifikacija";
+import Dashboard from "./pages/dashboard";
+import DodajProizvod from "./pages/dodajproizvod";
+import Poruke from "./pages/poruke";
 import { useEffect, useState } from "react";
 import './App.css';
 import './assets/styles/stilovi.css';
+import Welcome from "./pages/Welcome";
 
 function App() {
     const [ulogovaniKorisnik, setUlogovaniKorisnik] = useState(null);
@@ -47,6 +52,11 @@ function App() {
                     <Route path="/login" element={<LoginForma onLogin={setUlogovaniKorisnik} />} />
                     <Route path="/signup" element={<RegisterForma />} />
                     <Route path="/" element={<Pocetna />} />
+                    <Route path="/login" element={<Login />} />
+                    <Route path="/welcome" element={<Welcome />} />
+                    <Route path="/dashboard" element={<Dashboard />} />
+                    <Route path="/poruke" element={<Poruke />} />
+                    <Route path="/dodajproizvod" element={<DodajProizvod />} />
                     <Route path="/onama" element={
                         <>
                             <Header />

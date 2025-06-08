@@ -1,0 +1,151 @@
+.dashboard-header {
+    text-align: center;
+    font-family: "Sacramento", cursive;
+    color: darkolivegreen;
+    margin: 20px 0;
+}
+
+.dashboard-header h1 {
+    font-size: 2.5rem;
+}
+
+.dashboard-header .button {
+    display: block;
+    margin: 15px auto;
+    background-color: darkolivegreen;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.dashboard-header .button:hover {
+    background-color: olive;
+}
+
+.featured {
+    margin: 30px auto;
+    padding: 10px;
+}
+
+.featured h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.featured-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.featured-items .item {
+    background: #f9f9f9;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.featured-items .item img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.featured-items .item h3 {
+    font-family: "Sacramento", cursive;
+    font-size: 1.8rem;
+    margin: 10px 0;
+    color: darkolivegreen;
+}
+
+.featured-items .item p {
+    color: #555;
+}
+
+.featured-items .item .cijena {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: darkgreen;
+    margin: 10px 0;
+}
+
+.button {
+    background-color: darkolivegreen;
+    color: #fff;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: olive;
+}
+
+.notifikacija {
+    background-color: #dff0d8;
+    color: #3c763d;
+    border: 1px solid #d6e9c6;
+    padding: 10px;
+    text-align: center;
+    border-radius: 4px;
+    margin: 10px auto;
+    width: 50%;
+}
+.navbar {
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.navbar a:hover {
+    color: darkolivegreen;
+}
+
+.navbar .odjava {
+    background-color: darkolivegreen;
+    color: #fff;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.navbar .odjava:hover {
+    background-color: olive;
+}
+
+.poruke-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+.poruke-table th, .poruke-table td {
+    border: 1px solid #ccc;
+    padding: 0.5rem;
+    text-align: left;
+}
+
+.poruke-table th {
+    background-color: #f4f4f4;
+}
+
